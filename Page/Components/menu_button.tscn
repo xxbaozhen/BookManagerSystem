@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://fu3qi1low6uj"]
+
+[ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://Theme/Buttons.tres" id="1_emfjc"]
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Theme/MainWindow.tres" id="1_g0rqt"]
+[ext_resource type="Script" uid="uid://dxukbeo3ab4c" path="res://Page/Components/menu_button.gd" id="1_hfx3m"]
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Font/微软雅黑.ttf" id="3_hfx3m"]
+
+[sub_resource type="GDScript" id="GDScript_g2eam"]
+script/source = "extends Control
+"
+
+[node name="MenuButton" type="Control" unique_id=783985564]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+script = ExtResource("1_hfx3m")
+
+[node name="Background" type="Panel" parent="." unique_id=127303682]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_emfjc")
+
+[node name="SelectedBar" type="ColorRect" parent="." unique_id=1673789090]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1909649083]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_emfjc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1649581565]
+layout_mode = 2
+theme = ExtResource("1_g0rqt")
+theme_override_constants/separation = 16
+script = SubResource("GDScript_g2eam")
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=2143046052]
+custom_minimum_size = Vector2(30, 30)
+custom_maximum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1979053537]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hfx3m")
+theme_override_font_sizes/font_size = 18
+text = "测试文本"
+horizontal_alignment = 1
+vertical_alignment = 1

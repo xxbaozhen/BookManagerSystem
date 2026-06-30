@@ -1,0 +1,67 @@
+[gd_resource type="Theme" format=3 uid="uid://xnpbfckksybo"]
+
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Font/微软雅黑.ttf" id="1_a1dqw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjlbq"]
+bg_color = Color(0.8901961, 0.92156863, 0.9490196, 1)
+
+[sub_resource type="DPITexture" id="DPITexture_p3ivk"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2366"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.365, 0.365, 1)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lecc"]
+bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Background/base_type = &"Panel"
+Background/styles/panel = SubResource("StyleBoxFlat_wjlbq")
+H1/base_type = &"RichTextLabel"
+H1/colors/default_color = Color(0, 0, 0, 1)
+H1/colors/font_color = Color(0, 0, 0, 1)
+H1/colors/font_outline_color = Color(0, 0, 0, 1)
+H1/colors/font_selected_color = Color(0, 0, 0, 1)
+H1/colors/font_shadow_color = Color(0, 0, 0, 1)
+H1/colors/selection_color = Color(0, 0, 0, 1)
+H1/colors/table_border = Color(0, 0, 0, 1)
+H1/colors/table_even_row_bg = Color(0, 0, 0, 1)
+H1/colors/table_odd_row_bg = Color(0, 0, 0, 1)
+H1/constants/line_separation = 0
+H1/constants/line_spacing = 0
+H1/constants/outline_size = 0
+H1/constants/paragraph_separation = 0
+H1/constants/shadow_offset_x = 0
+H1/constants/shadow_offset_y = 0
+H1/constants/shadow_outline_size = 0
+H1/constants/strikethrough_alpha = 0
+H1/constants/table_h_separation = 0
+H1/constants/table_v_separation = 0
+H1/constants/text_highlight_h_padding = 0
+H1/constants/text_highlight_v_padding = 0
+H1/constants/underline_alpha = 0
+H1/font_sizes/bold_font_size = 16
+H1/font_sizes/bold_italics_font_size = 16
+H1/font_sizes/font_size = 16
+H1/font_sizes/italics_font_size = 16
+H1/font_sizes/mono_font_size = 16
+H1/font_sizes/normal_font_size = 21
+H1/fonts/bold_font = null
+H1/fonts/bold_italics_font = null
+H1/fonts/font = null
+H1/fonts/italics_font = null
+H1/fonts/mono_font = null
+H1/fonts/normal_font = ExtResource("1_a1dqw")
+H1/icons/horizontal_rule = SubResource("DPITexture_p3ivk")
+H1/styles/focus = SubResource("StyleBoxFlat_y2366")
+H1/styles/normal = SubResource("StyleBoxFlat_y2366")
+Sidebar/base_type = &"PanelContainer"
+Sidebar/styles/panel = SubResource("StyleBoxFlat_5lecc")
