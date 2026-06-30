@@ -14,12 +14,17 @@ config/name="BookManagerSystem"
 run/main_scene="uid://cg7uetwl8x2d0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+MenuButtonState="*uid://dkxbescgmp2tj"
+
 [display]
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
 window/size/resizable=false
 window/size/borderless=true
+window/size/maximize_disabled=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
