@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cv1tktdl81w1v"]
 
-[ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://Page/Scenes/menu_button.tscn" id="1_wifv8"]
-[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Font/FluentSystemIcons-Regular.ttf" id="2_b7aoo"]
-[ext_resource type="Script" uid="uid://dkpqx04arhsn" path="res://Page/Scenes/default_button.gd" id="2_ca6n7"]
+[ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://Src/ui/components/menu_button/menu_button.tscn" id="1_wifv8"]
+[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="2_b7aoo"]
+[ext_resource type="Script" uid="uid://dkpqx04arhsn" path="res://Src/ui/components/menu_button/default_button.gd" id="2_ca6n7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xydk8"]
 bg_color = Color(1, 1, 1, 0)

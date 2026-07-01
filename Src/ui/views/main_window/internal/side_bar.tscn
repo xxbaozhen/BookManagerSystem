@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://cmweo343mmrhb"]
 
-[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Theme/MainWindow.tres" id="1_sriic"]
-[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icon/Icon.png" id="2_0bmm3"]
-[ext_resource type="Script" uid="uid://bcg7bobsukrd6" path="res://Page/Scenes/menu.gd" id="3_l7de7"]
-[ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://Page/Scenes/menu_button.tscn" id="4_wkrya"]
-[ext_resource type="PackedScene" uid="uid://cv1tktdl81w1v" path="res://Page/Scenes/menu_button_Extend.tscn" id="5_0bmm3"]
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_sriic"]
+[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="2_0bmm3"]
+[ext_resource type="Script" uid="uid://bcg7bobsukrd6" path="res://Src/ui/views/main_window/menu.gd" id="3_l7de7"]
+[ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://Src/ui/components/menu_button/menu_button.tscn" id="4_wkrya"]
+[ext_resource type="PackedScene" uid="uid://cv1tktdl81w1v" path="res://Src/ui/components/menu_button/menu_button_Extend.tscn" id="5_0bmm3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h308"]
+bg_color = Color(1, 1, 1, 0)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_osxru"]
 color = Color(0.7176471, 0.79607844, 0.8627451, 0.14509805)
@@ -33,16 +36,20 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Logo" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=183870773]
+[node name="Shadow" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1578995351]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8h308")
+
+[node name="Logo" type="MarginContainer" parent="MarginContainer/VBoxContainer/Shadow" unique_id=183870773]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Logo" unique_id=769553659]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Shadow/Logo" unique_id=769553659]
 layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Logo/HBoxContainer" unique_id=595076889]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Shadow/Logo/HBoxContainer" unique_id=595076889]
 custom_minimum_size = Vector2(40, 40)
 custom_maximum_size = Vector2(60, 60)
 layout_mode = 2
@@ -52,7 +59,7 @@ texture = ExtResource("2_0bmm3")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Logo/HBoxContainer" unique_id=1901326993]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Shadow/Logo/HBoxContainer" unique_id=1901326993]
 layout_mode = 2
 theme = ExtResource("1_sriic")
 theme_type_variation = &"H1"
@@ -78,20 +85,20 @@ layout_mode = 2
 theme_override_constants/separation = 23
 
 [node name="Home" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=783985564 instance=ExtResource("4_wkrya")]
-visible = false
 layout_mode = 2
 text = "首页"
-
-[node name="Books" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=867328694 instance=ExtResource("4_wkrya")]
-layout_mode = 2
-text = "图书管理"
-icon_hex = "0xE177"
+icon_hex = "E710"
 state = 3
 
 [node name="Borrows" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=1882159898 instance=ExtResource("4_wkrya")]
 layout_mode = 2
 text = "借阅管理"
 icon_hex = "E364"
+
+[node name="Books" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=867328694 instance=ExtResource("4_wkrya")]
+layout_mode = 2
+text = "图书管理"
+icon_hex = "0xE177"
 
 [node name="Users" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=1039463172 instance=ExtResource("4_wkrya")]
 layout_mode = 2
@@ -125,4 +132,4 @@ theme_override_constants/margin_right = 20
 [node name="Exit" parent="MarginContainer/VBoxContainer/Bottom" unique_id=414412288 instance=ExtResource("5_0bmm3")]
 layout_mode = 2
 text = "退出登录"
-icon_hex = "F08E4"
+icon_hex = "F08E5"

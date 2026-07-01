@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bdgoqc2x50aju"]
+
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_1348a"]
+[ext_resource type="Script" uid="uid://blpr5vuv7rn7n" path="res://Src/ui/views/main_window/internal/top_bar.gd" id="2_bvi5b"]
+[ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://Assets/Themes/Buttons.tres" id="3_s7j1d"]
+[ext_resource type="Script" uid="uid://d0ltwh0th6d8k" path="res://Src/ui/components/font_icon/button_font_icon_component.gd" id="4_hrbl1"]
+[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="5_2txtq"]
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="6_drb5l"]
+[ext_resource type="Script" uid="uid://vhrpgks0msd0" path="res://Src/ui/views/main_window/internal/windows_button_panel.gd" id="7_wdux0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwtdw"]
+bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3f5l"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="Topbar" type="PanelContainer" unique_id=1940166538]
+custom_maximum_size = Vector2(-1, 79)
+size_flags_vertical = 3
+theme = ExtResource("1_1348a")
+theme_type_variation = &"TopBar"
+script = ExtResource("2_bvi5b")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=220672675]
+layout_mode = 2
+
+[node name="LeftContent" type="MarginContainer" parent="HBoxContainer" unique_id=2108648573]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LeftContent" unique_id=1448173611]
+layout_mode = 2
+
+[node name="SearchPanel" type="PanelContainer" parent="HBoxContainer/LeftContent/HBoxContainer" unique_id=1432324336]
+custom_minimum_size = Vector2(360, 0)
+custom_maximum_size = Vector2(480, -1)
+layout_mode = 2
+theme = ExtResource("1_1348a")
+theme_type_variation = &"SearchPanel"
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftContent/HBoxContainer/SearchPanel" unique_id=1945157804]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer" unique_id=957103866]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer/HBoxContainer" unique_id=536220924]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "搜索图书、作者、ISCN等..."
+max_length = 20
+emoji_menu_enabled = false
+clear_button_enabled = true
+caret_blink = true
+
+[node name="SearchButton" type="Button" parent="HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer/HBoxContainer" unique_id=22597987]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_s7j1d")
+theme_type_variation = &"SearchButton"
+text = "Q"
+flat = true
+script = ExtResource("4_hrbl1")
+icon_name = "F690"
+
+[node name="CenterContent" type="MarginContainer" parent="HBoxContainer" unique_id=997758687]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CenterContent" unique_id=913691874]
+layout_mode = 2
+theme_override_constants/separation = 11
+alignment = 2
+
+[node name="AvatarIcon" type="TextureRect" parent="HBoxContainer/CenterContent/HBoxContainer" unique_id=528843289]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("5_2txtq")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/CenterContent/HBoxContainer" unique_id=2066384020]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_drb5l")
+theme_override_font_sizes/font_size = 22
+text = "管理员"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowsButtons" type="MarginContainer" parent="HBoxContainer" unique_id=167099445]
+layout_mode = 2
+script = ExtResource("7_wdux0")
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/WindowsButtons" unique_id=854561709]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MinimizeButton" type="Button" parent="HBoxContainer/WindowsButtons/HBoxContainer" unique_id=17809715]
+custom_minimum_size = Vector2(79, 0)
+layout_mode = 2
+theme = ExtResource("3_s7j1d")
+theme_type_variation = &"DefaultButton"
+text = "-"
+script = ExtResource("4_hrbl1")
+icon_name = "EBCE"
+
+[node name="CloseButton" type="Button" parent="HBoxContainer/WindowsButtons/HBoxContainer" unique_id=1284617976]
+custom_minimum_size = Vector2(79, 0)
+layout_mode = 2
+theme = ExtResource("3_s7j1d")
+theme_type_variation = &"DefaultButton"
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kwtdw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m3f5l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kwtdw")
+text = "x"
+script = ExtResource("4_hrbl1")
+icon_name = "F367"
+
+[connection signal="pressed" from="HBoxContainer/WindowsButtons/HBoxContainer/MinimizeButton" to="HBoxContainer/WindowsButtons" method="_on_minimize_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/WindowsButtons/HBoxContainer/CloseButton" to="HBoxContainer/WindowsButtons" method="_on_close_button_pressed"]

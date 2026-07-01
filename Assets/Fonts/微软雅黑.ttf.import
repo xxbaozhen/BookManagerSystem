@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://rohnm04w58os"
-path="res://.godot/imported/FluentSystemIcons-Regular.ttf-c82c92aa34c760a4effe994c2e3a4952.fontdata"
+uid="uid://e2a4mbd3pix6"
+path="res://.godot/imported/微软雅黑.ttf-41c32363b2b851dae4ced8cca8280c5f.fontdata"
 
 [deps]
 
-source_file="res://Assets/Font/FluentSystemIcons-Regular.ttf"
-dest_files=["res://.godot/imported/FluentSystemIcons-Regular.ttf-c82c92aa34c760a4effe994c2e3a4952.fontdata"]
+source_file="res://Assets/Fonts/微软雅黑.ttf"
+dest_files=["res://.godot/imported/微软雅黑.ttf-41c32363b2b851dae4ced8cca8280c5f.fontdata"]
 
 [params]
 
