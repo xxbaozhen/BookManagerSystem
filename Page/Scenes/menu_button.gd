@@ -1,5 +1,5 @@
 @tool
-extends Control
+class_name mMenuButton extends Control
 
 @onready var background: Panel = $Background
 @onready var label: Label = $MarginContainer/HBoxContainer/Label
@@ -61,13 +61,14 @@ func _is_hex_string(input: String) -> bool:
 func _on_mouse_entered() -> void:
 	if is_disable: 
 		return
-	if state != MenuButtonState.state.Selected:
+	if state != MenuButtonState.state.Selected and state != MenuButtonState.state.Pressed:
 		state = MenuButtonState.state.Hover
 
 func _on_mouse_exited() -> void:
 	if is_disable: 
 		return
-	if state == MenuButtonState.state.Hover:
+	# 增加判定：如果处于 Hover 或者 Pressed 时移出了鼠标，都退回 Normal
+	if state == MenuButtonState.state.Hover or state == MenuButtonState.state.Pressed:
 		state = MenuButtonState.state.Normal
 
 func update_style() -> void:
@@ -78,7 +79,10 @@ func update_style() -> void:
 			background.add_theme_stylebox_override("panel", MenuButtonState.normal_flat)
 		MenuButtonState.state.Hover:
 			background.add_theme_stylebox_override("panel", MenuButtonState.hover_flat)
-			color = Color("red")
+			#color = Color("red")
+		MenuButtonState.state.Pressed: # 新增：Pressed状态样式
+			background.add_theme_stylebox_override("panel", MenuButtonState.pressed_flat)
+			color = Color("053299ff") # 给按住时分配一个较深的蓝色字体
 		MenuButtonState.state.Selected:
 			background.add_theme_stylebox_override("panel", MenuButtonState.selected_flat)
 			color = Color("0745cfff")
@@ -86,9 +90,12 @@ func update_style() -> void:
 			background.add_theme_stylebox_override("panel", MenuButtonState.Disabled_flat)
 			color = Color("585858ff")
 			mouse_default_cursor_shape = Control.CURSOR_ARROW
+			
 	# 指针重置
 	if state != MenuButtonState.state.Disabled:
 		mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		
 	# 状态修改
 	label.add_theme_color_override("font_color", color)
+	
 	icon.label_settings.font_color = color

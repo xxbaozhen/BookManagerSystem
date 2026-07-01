@@ -4,6 +4,12 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjlbq"]
 bg_color = Color(0.8901961, 0.92156863, 0.9490196, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 15
 
 [sub_resource type="DPITexture" id="DPITexture_p3ivk"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
@@ -17,10 +23,50 @@ content_margin_bottom = 4.0
 bg_color = Color(1, 0.365, 0.365, 1)
 draw_center = false
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3f5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npvv3"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osxru"]
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_detail = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1dqw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2ewo"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 15
+shadow_color = Color(0, 0, 0, 0.26666668)
+shadow_size = 18
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lecc"]
 bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
-corner_radius_top_left = 20
-corner_radius_bottom_left = 20
+corner_radius_top_left = 8
+corner_radius_bottom_left = 8
+corner_detail = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3ivk"]
+bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
+corner_radius_top_right = 8
+corner_detail = 15
 
 [resource]
 Background/base_type = &"Panel"
@@ -63,5 +109,20 @@ H1/fonts/normal_font = ExtResource("1_a1dqw")
 H1/icons/horizontal_rule = SubResource("DPITexture_p3ivk")
 H1/styles/focus = SubResource("StyleBoxFlat_y2366")
 H1/styles/normal = SubResource("StyleBoxFlat_y2366")
+LineEdit/colors/caret_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_placeholder_color = Color(0.370364, 0.37036473, 0.3703642, 0.6)
+LineEdit/font_sizes/font_size = 20
+LineEdit/fonts/font = ExtResource("1_a1dqw")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_m3f5l")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_npvv3")
+RigthPanel/base_type = &"PanelContainer"
+RigthPanel/styles/panel = SubResource("StyleBoxFlat_osxru")
+SearchPanel/base_type = &"PanelContainer"
+SearchPanel/styles/panel = SubResource("StyleBoxFlat_a1dqw")
+ShadowPanel/base_type = &"Panel"
+ShadowPanel/styles/panel = SubResource("StyleBoxFlat_y2ewo")
 Sidebar/base_type = &"PanelContainer"
 Sidebar/styles/panel = SubResource("StyleBoxFlat_5lecc")
+TopBar/base_type = &"PanelContainer"
+TopBar/styles/panel = SubResource("StyleBoxFlat_p3ivk")

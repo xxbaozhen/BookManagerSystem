@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://cg7uetwl8x2d0"]
+
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Theme/MainWindow.tres" id="1_tplqc"]
+[ext_resource type="Script" uid="uid://dg3kipsk3d7wp" path="res://Page/MainWindow.cs" id="2_au0tp"]
+[ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://Page/side_bar.tscn" id="3_tplqc"]
+[ext_resource type="Script" uid="uid://blpr5vuv7rn7n" path="res://Page/top_bar.gd" id="4_tplqc"]
+[ext_resource type="Script" uid="uid://d0ltwh0th6d8k" path="res://Scripts/Components/font_icon_component.gd" id="5_au0tp"]
+[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Font/FluentSystemIcons-Regular.ttf" id="5_m3f5l"]
+
+[node name="MainWindow" type="Control" unique_id=1324564751]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tplqc")
+script = ExtResource("2_au0tp")
+CornerRadius = 20
+
+[node name="MainMargin" type="MarginContainer" parent="." unique_id=1203706815]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="ShadowPanel" type="Panel" parent="MainMargin" unique_id=706875]
+layout_mode = 2
+theme = ExtResource("1_tplqc")
+theme_type_variation = &"ShadowPanel"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin" unique_id=1636535764]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Sidebar" parent="MainMargin/HBoxContainer" unique_id=24056476 instance=ExtResource("3_tplqc")]
+layout_mode = 2
+
+[node name="RightPanel" type="PanelContainer" parent="MainMargin/HBoxContainer" unique_id=1967428610]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_tplqc")
+theme_type_variation = &"RigthPanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/HBoxContainer/RightPanel" unique_id=1629807748]
+layout_mode = 2
+
+[node name="Topbar" type="PanelContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=955500273]
+custom_maximum_size = Vector2(-1, 79)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_tplqc")
+theme_type_variation = &"TopBar"
+script = ExtResource("4_tplqc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar" unique_id=1901377757]
+layout_mode = 2
+
+[node name="LeftContent" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer" unique_id=856988333]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent" unique_id=1961928749]
+layout_mode = 2
+
+[node name="SearchPanel" type="PanelContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer" unique_id=539864915]
+custom_maximum_size = Vector2(480, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_tplqc")
+theme_type_variation = &"SearchPanel"
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer/SearchPanel" unique_id=1314331482]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer" unique_id=927859814]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer/HBoxContainer" unique_id=201787016]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "搜索图书、作者、ISCN等..."
+max_length = 20
+emoji_menu_enabled = false
+clear_button_enabled = true
+caret_blink = true
+
+[node name="SearchButton" type="Button" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer/HBoxContainer" unique_id=714953834]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_m3f5l")
+theme_override_font_sizes/font_size = 24
+text = "Q"
+flat = true
+script = ExtResource("5_au0tp")
+icon_name = "F690"
+
+[node name="Dashboard" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=1682342741]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30

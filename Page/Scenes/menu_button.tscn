@@ -2,9 +2,16 @@
 
 [ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://Theme/Buttons.tres" id="1_emfjc"]
 [ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Theme/MainWindow.tres" id="1_g0rqt"]
-[ext_resource type="Script" uid="uid://dxukbeo3ab4c" path="res://Page/Components/menu_button.gd" id="1_hfx3m"]
+[ext_resource type="Script" uid="uid://dxukbeo3ab4c" path="res://Page/Scenes/menu_button.gd" id="1_hfx3m"]
 [ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Font/微软雅黑.ttf" id="3_hfx3m"]
 [ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Font/FluentSystemIcons-Regular.ttf" id="4_hfx3m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfx3m"]
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="GDScript" id="GDScript_g2eam"]
 script/source = "extends Control
@@ -39,6 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_emfjc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfx3m")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1909649083]
 layout_mode = 1

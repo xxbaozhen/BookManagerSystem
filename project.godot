@@ -12,7 +12,7 @@ config_version=5
 
 config/name="BookManagerSystem"
 run/main_scene="uid://cg7uetwl8x2d0"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 
 [autoload]
 
@@ -24,9 +24,11 @@ window/size/viewport_width=1600
 window/size/viewport_height=900
 window/size/resizable=false
 window/size/borderless=true
+window/size/transparent=true
 window/size/maximize_disabled=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/per_pixel_transparency/allowed=true
 
 [dotnet]
 
