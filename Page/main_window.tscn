@@ -4,8 +4,17 @@
 [ext_resource type="Script" uid="uid://dg3kipsk3d7wp" path="res://Page/MainWindow.cs" id="2_au0tp"]
 [ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://Page/side_bar.tscn" id="3_tplqc"]
 [ext_resource type="Script" uid="uid://blpr5vuv7rn7n" path="res://Page/top_bar.gd" id="4_tplqc"]
-[ext_resource type="Script" uid="uid://d0ltwh0th6d8k" path="res://Scripts/Components/font_icon_component.gd" id="5_au0tp"]
-[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Font/FluentSystemIcons-Regular.ttf" id="5_m3f5l"]
+[ext_resource type="Script" uid="uid://d0ltwh0th6d8k" path="res://Scripts/Components/button_font_icon_component.gd" id="5_au0tp"]
+[ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://Theme/Buttons.tres" id="5_m3f5l"]
+[ext_resource type="Script" uid="uid://vhrpgks0msd0" path="res://Page/windows_button_panel.gd" id="7_kwtdw"]
+[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icon/Icon.png" id="7_wr2tg"]
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Font/微软雅黑.ttf" id="8_w4qxw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwtdw"]
+bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3f5l"]
+bg_color = Color(1, 0, 0, 1)
 
 [node name="MainWindow" type="Control" unique_id=1324564751]
 layout_mode = 3
@@ -16,7 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_tplqc")
 script = ExtResource("2_au0tp")
-CornerRadius = 20
 
 [node name="MainMargin" type="MarginContainer" parent="." unique_id=1203706815]
 layout_mode = 0
@@ -61,7 +69,6 @@ layout_mode = 2
 
 [node name="LeftContent" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer" unique_id=856988333]
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
@@ -70,9 +77,9 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 
 [node name="SearchPanel" type="PanelContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer" unique_id=539864915]
+custom_minimum_size = Vector2(360, 0)
 custom_maximum_size = Vector2(480, -1)
 layout_mode = 2
-size_flags_horizontal = 3
 theme = ExtResource("1_tplqc")
 theme_type_variation = &"SearchPanel"
 metadata/_edit_group_ = true
@@ -99,16 +106,78 @@ caret_blink = true
 [node name="SearchButton" type="Button" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer/HBoxContainer" unique_id=714953834]
 layout_mode = 2
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_m3f5l")
-theme_override_font_sizes/font_size = 24
+theme = ExtResource("5_m3f5l")
+theme_type_variation = &"SearchButton"
 text = "Q"
 flat = true
 script = ExtResource("5_au0tp")
 icon_name = "F690"
+
+[node name="CenterContent" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer" unique_id=1691660392]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/CenterContent" unique_id=634871780]
+layout_mode = 2
+theme_override_constants/separation = 11
+alignment = 2
+
+[node name="AvatarIcon" type="TextureRect" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/CenterContent/HBoxContainer" unique_id=1399403771]
+custom_maximum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("7_wr2tg")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/CenterContent/HBoxContainer" unique_id=2048918095]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_w4qxw")
+theme_override_font_sizes/font_size = 22
+text = "管理员"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowsButtons" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer" unique_id=380950918]
+layout_mode = 2
+script = ExtResource("7_kwtdw")
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons" unique_id=219698245]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MinimizeButton" type="Button" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons/HBoxContainer" unique_id=166081743]
+custom_minimum_size = Vector2(79, 0)
+layout_mode = 2
+theme = ExtResource("5_m3f5l")
+theme_type_variation = &"DefaultButton"
+text = "-"
+script = ExtResource("5_au0tp")
+icon_name = "EBCE"
+
+[node name="CloseButton" type="Button" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons/HBoxContainer" unique_id=2003547757]
+custom_minimum_size = Vector2(79, 0)
+layout_mode = 2
+theme = ExtResource("5_m3f5l")
+theme_type_variation = &"DefaultButton"
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kwtdw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m3f5l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kwtdw")
+text = "x"
+script = ExtResource("5_au0tp")
+icon_name = "F367"
 
 [node name="Dashboard" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=1682342741]
 layout_mode = 2
@@ -117,3 +186,6 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
+
+[connection signal="pressed" from="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons/HBoxContainer/MinimizeButton" to="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons" method="_on_minimize_button_pressed"]
+[connection signal="pressed" from="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons/HBoxContainer/CloseButton" to="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Topbar/HBoxContainer/WindowsButtons" method="_on_close_button_pressed"]

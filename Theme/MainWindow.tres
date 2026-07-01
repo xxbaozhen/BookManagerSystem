@@ -25,7 +25,7 @@ draw_center = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3f5l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npvv3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsudi"]
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osxru"]
@@ -115,7 +115,7 @@ LineEdit/colors/font_placeholder_color = Color(0.370364, 0.37036473, 0.3703642, 
 LineEdit/font_sizes/font_size = 20
 LineEdit/fonts/font = ExtResource("1_a1dqw")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_m3f5l")
-LineEdit/styles/normal = SubResource("StyleBoxFlat_npvv3")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_nsudi")
 RigthPanel/base_type = &"PanelContainer"
 RigthPanel/styles/panel = SubResource("StyleBoxFlat_osxru")
 SearchPanel/base_type = &"PanelContainer"

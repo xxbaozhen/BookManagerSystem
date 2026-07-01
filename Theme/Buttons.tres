@@ -1,5 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://ckaj6w46fpx6s"]
 
+[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Font/FluentSystemIcons-Regular.ttf" id="1_6hu44"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3f5l"]
+bg_color = Color(1, 1, 1, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tquyo"]
 bg_color = Color(0.5411765, 0.6117647, 1, 0.13725491)
 corner_radius_top_left = 8
@@ -8,8 +13,41 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [resource]
+DefaultButton/base_type = &"Button"
+DefaultButton/colors/font_color = Color(0, 0, 0, 1)
+DefaultButton/colors/font_disabled_color = Color(0, 0, 0, 1)
+DefaultButton/colors/font_focus_color = Color(0, 0, 0, 1)
+DefaultButton/colors/font_hover_color = Color(0, 0, 0, 1)
+DefaultButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+DefaultButton/colors/font_outline_color = Color(0, 0, 0, 1)
+DefaultButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+DefaultButton/colors/icon_disabled_color = Color(0, 0, 0, 1)
+DefaultButton/colors/icon_focus_color = Color(0, 0, 0, 1)
+DefaultButton/colors/icon_hover_color = Color(0, 0, 0, 1)
+DefaultButton/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+DefaultButton/colors/icon_normal_color = Color(0, 0, 0, 1)
+DefaultButton/colors/icon_pressed_color = Color(0, 0, 0, 1)
+DefaultButton/font_sizes/font_size = 24
+DefaultButton/fonts/font = ExtResource("1_6hu44")
+DefaultButton/styles/normal = SubResource("StyleBoxFlat_m3f5l")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 15
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 Panel/styles/panel = SubResource("StyleBoxFlat_tquyo")
+SearchButton/base_type = &"Button"
+SearchButton/colors/font_color = Color(0, 0, 0, 1)
+SearchButton/colors/font_disabled_color = Color(0, 0, 0, 1)
+SearchButton/colors/font_focus_color = Color(0, 0, 0, 1)
+SearchButton/colors/font_hover_color = Color(0, 0, 0, 1)
+SearchButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+SearchButton/colors/font_outline_color = Color(0, 0, 0, 1)
+SearchButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+SearchButton/colors/icon_disabled_color = Color(0, 0, 0, 1)
+SearchButton/colors/icon_focus_color = Color(0, 0, 0, 1)
+SearchButton/colors/icon_hover_color = Color(0, 0, 0, 1)
+SearchButton/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+SearchButton/colors/icon_normal_color = Color(0, 0, 0, 1)
+SearchButton/colors/icon_pressed_color = Color(0, 0, 0, 1)
+SearchButton/font_sizes/font_size = 24
+SearchButton/fonts/font = ExtResource("1_6hu44")
