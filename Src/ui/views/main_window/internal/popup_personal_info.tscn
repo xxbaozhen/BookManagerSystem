@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cyp40fsqv6o1u"]
+
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_k0fm6"]
+[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="2_qnmcw"]
+
+[node name="PopupPersonalInfo" type="PopupPanel" unique_id=226862388]
+oversampling_override = 1.0
+size = Vector2i(193, 250)
+theme = ExtResource("1_k0fm6")
+theme_type_variation = &"PopupPerInfo"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1400589481]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=481868871]
+layout_mode = 2
+
+[node name="UserInfo" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2006100930]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/UserInfo" unique_id=587594032]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_qnmcw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/UserInfo" unique_id=1992476476]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/UserInfo/VBoxContainer" unique_id=310635868]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_k0fm6")
+theme_type_variation = &"H1"
+text = "Administrator"
+
+[node name="Auth" type="Label" parent="MarginContainer/VBoxContainer/UserInfo/VBoxContainer" unique_id=416717360]
+layout_mode = 2
+theme = ExtResource("1_k0fm6")
+theme_type_variation = &"H2"
+text = "超级管理员"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=804730232]
+layout_mode = 2
+
+[node name="InfoList" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=540578211]
+layout_mode = 2

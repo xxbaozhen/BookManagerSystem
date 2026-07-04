@@ -62,7 +62,7 @@ stretch_mode = 5
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Shadow/Logo/HBoxContainer" unique_id=1901326993]
 layout_mode = 2
 theme = ExtResource("1_sriic")
-theme_type_variation = &"H1"
+theme_type_variation = &"H1_Rich"
 bbcode_enabled = true
 text = "图书管理系统"
 scroll_active = false

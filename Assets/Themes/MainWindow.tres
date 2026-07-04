@@ -2,6 +2,13 @@
 
 [ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="1_a1dqw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl2re"]
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 12
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjlbq"]
 bg_color = Color(0.8901961, 0.92156863, 0.9490196, 1)
 border_color = Color(0, 0, 0, 1)
@@ -30,6 +37,16 @@ draw_center = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsudi"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pwth"]
+bg_color = Color(0.94764113, 0.96259046, 0.9776916, 0.96000004)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.30544382, 0.3115842, 0.31771857, 1)
+border_blend = true
+shadow_size = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osxru"]
 bg_color = Color(1, 1, 1, 0)
@@ -77,48 +94,39 @@ shadow_size = 5
 shadow_offset = Vector2(3.33, 0)
 
 [resource]
+AvatarPanel/base_type = &"PanelContainer"
+AvatarPanel/styles/panel = SubResource("StyleBoxFlat_xl2re")
 Background/base_type = &"Panel"
 Background/styles/panel = SubResource("StyleBoxFlat_wjlbq")
 DashboardPanel/base_type = &"PanelContainer"
 DashboardPanel/styles/panel = SubResource("StyleBoxFlat_r38mi")
-H1/base_type = &"RichTextLabel"
-H1/colors/default_color = Color(0, 0, 0, 1)
+H1/base_type = &"Label"
 H1/colors/font_color = Color(0, 0, 0, 1)
-H1/colors/font_outline_color = Color(0, 0, 0, 1)
-H1/colors/font_selected_color = Color(0, 0, 0, 1)
-H1/colors/font_shadow_color = Color(0, 0, 0, 1)
-H1/colors/selection_color = Color(0, 0, 0, 1)
-H1/colors/table_border = Color(0, 0, 0, 1)
-H1/colors/table_even_row_bg = Color(0, 0, 0, 1)
-H1/colors/table_odd_row_bg = Color(0, 0, 0, 1)
-H1/constants/line_separation = 0
-H1/constants/line_spacing = 0
-H1/constants/outline_size = 0
-H1/constants/paragraph_separation = 0
-H1/constants/shadow_offset_x = 0
-H1/constants/shadow_offset_y = 0
-H1/constants/shadow_outline_size = 0
-H1/constants/strikethrough_alpha = 0
-H1/constants/table_h_separation = 0
-H1/constants/table_v_separation = 0
-H1/constants/text_highlight_h_padding = 0
-H1/constants/text_highlight_v_padding = 0
-H1/constants/underline_alpha = 0
-H1/font_sizes/bold_font_size = 16
-H1/font_sizes/bold_italics_font_size = 16
-H1/font_sizes/font_size = 16
-H1/font_sizes/italics_font_size = 16
-H1/font_sizes/mono_font_size = 16
-H1/font_sizes/normal_font_size = 21
-H1/fonts/bold_font = null
-H1/fonts/bold_italics_font = null
-H1/fonts/font = null
-H1/fonts/italics_font = null
-H1/fonts/mono_font = null
-H1/fonts/normal_font = ExtResource("1_a1dqw")
-H1/icons/horizontal_rule = SubResource("DPITexture_p3ivk")
-H1/styles/focus = SubResource("StyleBoxFlat_y2366")
-H1/styles/normal = SubResource("StyleBoxFlat_y2366")
+H1/font_sizes/font_size = 18
+H1/fonts/font = ExtResource("1_a1dqw")
+H1_Rich/base_type = &"RichTextLabel"
+H1_Rich/colors/default_color = Color(0, 0, 0, 1)
+H1_Rich/constants/shadow_outline_size = 0
+H1_Rich/constants/strikethrough_alpha = 0
+H1_Rich/constants/table_h_separation = 0
+H1_Rich/constants/table_v_separation = 0
+H1_Rich/constants/text_highlight_h_padding = 0
+H1_Rich/constants/text_highlight_v_padding = 0
+H1_Rich/constants/underline_alpha = 0
+H1_Rich/font_sizes/bold_font_size = 16
+H1_Rich/font_sizes/bold_italics_font_size = 16
+H1_Rich/font_sizes/font_size = 16
+H1_Rich/font_sizes/italics_font_size = 16
+H1_Rich/font_sizes/mono_font_size = 16
+H1_Rich/font_sizes/normal_font_size = 21
+H1_Rich/fonts/normal_font = ExtResource("1_a1dqw")
+H1_Rich/icons/horizontal_rule = SubResource("DPITexture_p3ivk")
+H1_Rich/styles/focus = SubResource("StyleBoxFlat_y2366")
+H1_Rich/styles/normal = SubResource("StyleBoxFlat_y2366")
+H2/base_type = &"Label"
+H2/colors/font_color = Color(0, 0, 0, 1)
+H2/font_sizes/font_size = 13
+H2/fonts/font = ExtResource("1_a1dqw")
 LineEdit/colors/caret_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_placeholder_color = Color(0.370364, 0.37036473, 0.3703642, 0.6)
@@ -126,6 +134,8 @@ LineEdit/font_sizes/font_size = 20
 LineEdit/fonts/font = ExtResource("1_a1dqw")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_m3f5l")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_nsudi")
+PopupPerInfo/base_type = &"PopupPanel"
+PopupPerInfo/styles/panel = SubResource("StyleBoxFlat_7pwth")
 RightPanel/base_type = &"PanelContainer"
 RightPanel/styles/panel = SubResource("StyleBoxFlat_osxru")
 SearchPanel/base_type = &"PanelContainer"
