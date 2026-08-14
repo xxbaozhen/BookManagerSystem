@@ -60,6 +60,7 @@ layout_mode = 2
 menu = NodePath("../PopupPersonalInfo")
 
 [node name="PopupPersonalInfo" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=226862388 instance=ExtResource("5_a4sk4")]
+visible = false
 
 [node name="Dashboard" type="PanelContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=744875133]
 layout_mode = 2

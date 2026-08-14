@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="3_hfx3m"]
 [ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="4_hfx3m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfx3m"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03df1"]
 bg_color = Color(1, 1, 1, 0)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -46,7 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_emfjc")
-theme_override_styles/panel = SubResource("StyleBoxFlat_hfx3m")
+theme_override_styles/panel = SubResource("StyleBoxFlat_03df1")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1909649083]
 layout_mode = 1

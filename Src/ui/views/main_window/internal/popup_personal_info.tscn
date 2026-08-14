@@ -6,6 +6,7 @@
 [node name="PopupPersonalInfo" type="PopupPanel" unique_id=226862388]
 oversampling_override = 1.0
 size = Vector2i(193, 250)
+visible = true
 theme = ExtResource("1_k0fm6")
 theme_type_variation = &"PopupPerInfo"
 
@@ -13,16 +14,16 @@ theme_type_variation = &"PopupPerInfo"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = -1.0
-offset_bottom = -1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 15
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=481868871]
 layout_mode = 2

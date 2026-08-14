@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="6_ifmeu"]
 [ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="7_2rsi2"]
 [ext_resource type="Script" uid="uid://vhrpgks0msd0" path="res://Src/ui/views/main_window/internal/windows_button_panel.gd" id="8_6tkp5"]
-[ext_resource type="Script" uid="uid://34d0klsl8oif" path="res://Src/ui/components/font_icon/lable_font_icon_component.gd" id="8_045th"]
+[ext_resource type="Script" uid="uid://34d0klsl8oif" path="res://Src/ui/components/font_icon/label_font_icon_component.gd" id="8_045th"]
 [ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="8_r36q3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xl2re"]
@@ -61,7 +61,7 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer/LeftContent/HBoxContainer/SearchPanel/MarginContainer/HBoxContainer" unique_id=1678703722]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "搜索图书、作者、ISCN等..."
+placeholder_text = "搜索图书、作者、ISBN等..."
 max_length = 20
 emoji_menu_enabled = false
 clear_button_enabled = true
@@ -121,7 +121,7 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_2rsi2")
 theme_override_font_sizes/font_size = 17
-text = "Administrater"
+text = "Administrator"
 horizontal_alignment = 1
 vertical_alignment = 1
 
