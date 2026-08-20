@@ -39,24 +39,7 @@ func _ready():
 	mouse_exited.connect(_on_mouse_exited)
 
 func _update_icon_display(hex_val: String) -> void:
-	if _is_hex_string(hex_val):
-		var code = hex_val.hex_to_int()
-		if code >= 0 and code <= 0x10FFFF:
-			icon.text = char(code)
-		else:
-			icon.text = ""
-	else:
-		icon.text = ""
-
-func _is_hex_string(input: String) -> bool:
-	if input.is_empty(): return false
-	var clean_str = input.trim_prefix("0x").trim_prefix("0X")
-	if clean_str.is_empty(): return false
-	
-	for c in clean_str:
-		if not (c in "0123456789abcdefABCDEF"):
-			return false
-	return true
+	icon.text = FontIconUtil.code_point_to_text(hex_val)
 
 func _on_mouse_entered() -> void:
 	if is_disable: 
@@ -86,7 +69,7 @@ func update_style() -> void:
 			background.add_theme_stylebox_override("panel", MenuButtonState.selected_flat)
 			color = Color("#0745cfff")
 		MenuButtonState.state.Disabled:
-			background.add_theme_stylebox_override("panel", MenuButtonState.Disabled_flat)
+			background.add_theme_stylebox_override("panel", MenuButtonState.disabled_flat)
 			color = Color("#585858ff")
 			mouse_default_cursor_shape = Control.CURSOR_ARROW
 			

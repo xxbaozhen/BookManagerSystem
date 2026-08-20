@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 
 [autoload]
 
-MenuButtonState="*uid://dkxbescgmp2tj"
+MenuButtonState="*uid://st05gld6k8an"
 
 [display]
 

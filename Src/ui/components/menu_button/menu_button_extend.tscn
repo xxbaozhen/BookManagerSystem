@@ -1,27 +1,7 @@
 [gd_scene format=3 uid="uid://dcv5n12k0d276"]
 
 [ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://Src/ui/components/menu_button/menu_button.tscn" id="1_wifv8"]
-[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="2_b7aoo"]
 [ext_resource type="Script" uid="uid://dkpqx04arhsn" path="res://Src/ui/components/menu_button/default_button.gd" id="2_ca6n7"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xydk8"]
-bg_color = Color(1, 1, 1, 0)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_mlise"]
-resource_local_to_scene = true
-font = ExtResource("2_b7aoo")
-font_size = 26
-font_color = Color(0, 0, 0, 1)
 
 [node name="MenuButton_Extend" unique_id=783985564 instance=ExtResource("1_wifv8")]
 script = ExtResource("2_ca6n7")
-
-[node name="Background" parent="." index="0" unique_id=127303682]
-theme_override_styles/panel = SubResource("StyleBoxFlat_xydk8")
-
-[node name="IconLabel" parent="MarginContainer/HBoxContainer" parent_id_path=PackedInt32Array(1649581565) index="0" unique_id=1789222071]
-label_settings = SubResource("LabelSettings_mlise")

@@ -13,7 +13,7 @@ static var normal_flat: StyleBoxFlat
 static var hover_flat: StyleBoxFlat
 static var pressed_flat: StyleBoxFlat # 新增
 static var selected_flat: StyleBoxFlat
-static var Disabled_flat: StyleBoxFlat
+static var disabled_flat: StyleBoxFlat
 
 func _ready() -> void:
 	normal_flat = _create_style(Color.TRANSPARENT)
@@ -21,7 +21,7 @@ func _ready() -> void:
 	# 新增：按住时的背景色，这里选了一个比 Hover 更明显的浅蓝色
 	pressed_flat = _create_style(Color("#E1EFFF")) 
 	selected_flat = _create_style(Color("#48bfff3b"))
-	Disabled_flat = _create_style(Color.TRANSPARENT)
+	disabled_flat = _create_style(Color.TRANSPARENT)
 
 func _create_style(bg: Color) -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()

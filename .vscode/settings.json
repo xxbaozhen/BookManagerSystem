@@ -1,3 +1,9 @@
 {
-    "godotTools.editorPath.godot4": "d:\\Users\\xxbaozhen\\Program\\Godot\\Godot_v4.7-stable_mono_win64\\Godot_v4.7-stable_mono_win64.exe"
+    "files.exclude": {
+        "**/*.uid": true,
+        "**/*.import": true,
+        "**/.godot": true,
+        "**/.release": true,
+        "**/export_presets.cfg": true,
+    }
 }

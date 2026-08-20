@@ -3,16 +3,25 @@
 [ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_t0bgy"]
 [ext_resource type="Script" uid="uid://blpr5vuv7rn7n" path="res://Src/ui/views/main_window/internal/top_bar.gd" id="2_045th"]
 [ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://Assets/Themes/Buttons.tres" id="3_r36q3"]
-[ext_resource type="Script" uid="uid://d0ltwh0th6d8k" path="res://Src/ui/components/font_icon/button_font_icon_component.gd" id="4_ok5kg"]
+[ext_resource type="Script" uid="uid://drhji8xgnestq" path="res://Src/ui/components/font_icon/font_icon_component.gd" id="4_ii5dt"]
 [ext_resource type="Shader" uid="uid://d1c113jxl44pt" path="res://Assets/Shaders/avatar.gdshader" id="5_ii5dt"]
 [ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="6_ifmeu"]
 [ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="7_2rsi2"]
 [ext_resource type="Script" uid="uid://vhrpgks0msd0" path="res://Src/ui/views/main_window/internal/windows_button_panel.gd" id="8_6tkp5"]
-[ext_resource type="Script" uid="uid://34d0klsl8oif" path="res://Src/ui/components/font_icon/label_font_icon_component.gd" id="8_045th"]
 [ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="8_r36q3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xl2re"]
 shader = ExtResource("5_ii5dt")
+
+[sub_resource type="GDScript" id="GDScript_045th"]
+script/source = "@tool
+extends Button
+
+@export var icon_name: String
+
+func _ready() -> void:
+	text = FontIconUtil.code_point_to_text(icon_name)
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwtdw"]
 bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
@@ -72,9 +81,9 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 theme = ExtResource("3_r36q3")
 theme_type_variation = &"SearchButton"
-text = "Q"
+text = ""
 flat = true
-script = ExtResource("4_ok5kg")
+script = ExtResource("4_ii5dt")
 icon_name = "F690"
 
 [node name="CenterContent" type="MarginContainer" parent="HBoxContainer" unique_id=554878928]
@@ -87,6 +96,7 @@ theme_override_constants/margin_bottom = 15
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CenterContent" unique_id=1955941564]
 layout_mode = 2
 size_flags_horizontal = 8
+mouse_filter = 0
 theme_override_constants/separation = 0
 alignment = 2
 
@@ -133,10 +143,10 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_r36q3")
 theme_override_font_sizes/font_size = 17
-text = "V"
+text = ""
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("8_045th")
+script = ExtResource("4_ii5dt")
 icon_name = "F2A1"
 
 [node name="WindowsButtons" type="MarginContainer" parent="HBoxContainer" unique_id=2108775066]
@@ -153,8 +163,8 @@ custom_minimum_size = Vector2(79, 0)
 layout_mode = 2
 theme = ExtResource("3_r36q3")
 theme_type_variation = &"DefaultButton"
-text = "-"
-script = ExtResource("4_ok5kg")
+text = ""
+script = SubResource("GDScript_045th")
 icon_name = "EBCE"
 
 [node name="CloseButton" type="Button" parent="HBoxContainer/WindowsButtons/HBoxContainer" unique_id=1566250074]
@@ -168,8 +178,8 @@ theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kwtdw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m3f5l")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kwtdw")
-text = "x"
-script = ExtResource("4_ok5kg")
+text = ""
+script = SubResource("GDScript_045th")
 icon_name = "F367"
 
 [connection signal="pressed" from="HBoxContainer/WindowsButtons/HBoxContainer/MinimizeButton" to="HBoxContainer/WindowsButtons" method="_on_minimize_button_pressed"]
