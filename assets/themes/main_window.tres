@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://xnpbfckksybo"]
 
-[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="1_a1dqw"]
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://assets/fonts/微软雅黑.ttf" id="1_a1dqw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl2re"]
 corner_radius_top_left = 100

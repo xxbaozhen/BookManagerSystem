@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://ckaj6w46fpx6s"]
 
-[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="1_6hu44"]
+[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://assets/fonts/FluentSystemIcons-Regular.ttf" id="1_6hu44"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3f5l"]
 bg_color = Color(1, 1, 1, 1)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cyp40fsqv6o1u"]
 
-[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_k0fm6"]
-[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="2_qnmcw"]
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://assets/themes/main_window.tres" id="1_k0fm6"]
+[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://assets/icons/Icon.png" id="2_qnmcw"]
 
 [node name="PopupPersonalInfo" type="PopupPanel" unique_id=226862388]
 oversampling_override = 1.0

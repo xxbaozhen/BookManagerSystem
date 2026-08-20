@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bdgoqc2x50aju"]
 
-[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_t0bgy"]
-[ext_resource type="Script" uid="uid://blpr5vuv7rn7n" path="res://Src/ui/views/main_window/internal/top_bar.gd" id="2_045th"]
-[ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://Assets/Themes/Buttons.tres" id="3_r36q3"]
-[ext_resource type="Script" uid="uid://drhji8xgnestq" path="res://Src/ui/components/font_icon/font_icon_component.gd" id="4_ii5dt"]
-[ext_resource type="Shader" uid="uid://d1c113jxl44pt" path="res://Assets/Shaders/avatar.gdshader" id="5_ii5dt"]
-[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="6_ifmeu"]
-[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://Assets/Fonts/微软雅黑.ttf" id="7_2rsi2"]
-[ext_resource type="Script" uid="uid://vhrpgks0msd0" path="res://Src/ui/views/main_window/internal/windows_button_panel.gd" id="8_6tkp5"]
-[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://Assets/Fonts/FluentSystemIcons-Regular.ttf" id="8_r36q3"]
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://assets/themes/main_window.tres" id="1_t0bgy"]
+[ext_resource type="Script" uid="uid://blpr5vuv7rn7n" path="res://src/ui/views/main_window/internal/top_bar.gd" id="2_045th"]
+[ext_resource type="Theme" uid="uid://ckaj6w46fpx6s" path="res://assets/themes/buttons.tres" id="3_r36q3"]
+[ext_resource type="Script" uid="uid://drhji8xgnestq" path="res://src/ui/components/font_icon/font_icon_component.gd" id="4_ii5dt"]
+[ext_resource type="Shader" uid="uid://d1c113jxl44pt" path="res://assets/shaders/avatar.gdshader" id="5_ii5dt"]
+[ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://assets/icons/Icon.png" id="6_ifmeu"]
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://assets/fonts/微软雅黑.ttf" id="7_2rsi2"]
+[ext_resource type="Script" uid="uid://vhrpgks0msd0" path="res://src/ui/views/main_window/internal/windows_button_panel.gd" id="8_6tkp5"]
+[ext_resource type="FontFile" uid="uid://rohnm04w58os" path="res://assets/fonts/FluentSystemIcons-Regular.ttf" id="8_r36q3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xl2re"]
 shader = ExtResource("5_ii5dt")
@@ -29,7 +29,7 @@ bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3f5l"]
 bg_color = Color(1, 0, 0, 1)
 
-[node name="Topbar" type="PanelContainer" unique_id=475468016]
+[node name="TopBar" type="PanelContainer" unique_id=475468016]
 custom_minimum_size = Vector2(1322, 79)
 custom_maximum_size = Vector2(-1, 79)
 size_flags_vertical = 3

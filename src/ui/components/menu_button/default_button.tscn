@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dcv5n12k0d276"]
+
+[ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://src/ui/components/menu_button/sidebar_menu_button.tscn" id="1_wifv8"]
+[ext_resource type="Script" uid="uid://dkpqx04arhsn" path="res://src/ui/components/menu_button/default_button.gd" id="2_ca6n7"]
+
+[node name="MenuButtonExtend" unique_id=783985564 instance=ExtResource("1_wifv8")]
+script = ExtResource("2_ca6n7")

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cg7uetwl8x2d0"]
 
-[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_ompdd"]
-[ext_resource type="Script" uid="uid://dg3kipsk3d7wp" path="res://Src/ui/views/main_window/MainWindow.cs" id="2_awo48"]
-[ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://Src/ui/views/main_window/internal/side_bar.tscn" id="3_5anip"]
-[ext_resource type="PackedScene" uid="uid://bdgoqc2x50aju" path="res://Src/ui/views/main_window/internal/top_bar.tscn" id="4_wrheh"]
-[ext_resource type="PackedScene" uid="uid://cyp40fsqv6o1u" path="res://Src/ui/views/main_window/internal/popup_personal_info.tscn" id="5_u6yt3"]
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://assets/themes/main_window.tres" id="1_ompdd"]
+[ext_resource type="Script" uid="uid://dg3kipsk3d7wp" path="res://src/ui/views/main_window/MainWindow.cs" id="2_awo48"]
+[ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://src/ui/views/main_window/internal/side_bar.tscn" id="3_5anip"]
+[ext_resource type="PackedScene" uid="uid://bdgoqc2x50aju" path="res://src/ui/views/main_window/internal/top_bar.tscn" id="4_wrheh"]
+[ext_resource type="PackedScene" uid="uid://cyp40fsqv6o1u" path="res://src/ui/views/main_window/internal/popup_personal_info.tscn" id="5_u6yt3"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5sdux"]
 color = Color(0, 0, 0, 0)
@@ -55,7 +55,7 @@ theme_type_variation = &"RightPanel"
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/HBoxContainer/RightPanel" unique_id=1629807748]
 layout_mode = 2
 
-[node name="Topbar" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=475468016 node_paths=PackedStringArray("menu") instance=ExtResource("4_wrheh")]
+[node name="TopBar" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=475468016 node_paths=PackedStringArray("menu") instance=ExtResource("4_wrheh")]
 layout_mode = 2
 menu = NodePath("../PopupPersonalInfo")
 
