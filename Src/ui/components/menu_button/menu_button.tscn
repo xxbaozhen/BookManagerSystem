@@ -13,22 +13,11 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="GDScript" id="GDScript_g2eam"]
-script/source = "extends Control
-"
-
 [sub_resource type="LabelSettings" id="LabelSettings_5sdux"]
 resource_local_to_scene = true
 font = ExtResource("4_hfx3m")
 font_size = 26
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="GDScript" id="GDScript_hfx3m"]
-script/source = "extends Label
-
-func _ready() -> void:
-	text = char(0xE177)
-"
 
 [node name="MenuButton" type="Control" unique_id=783985564]
 custom_minimum_size = Vector2(0, 60)
@@ -61,7 +50,6 @@ theme = ExtResource("1_emfjc")
 layout_mode = 2
 theme = ExtResource("1_g0rqt")
 theme_override_constants/separation = 16
-script = SubResource("GDScript_g2eam")
 
 [node name="IconLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1789222071]
 custom_minimum_size = Vector2(30, 0)
@@ -70,7 +58,6 @@ size_flags_horizontal = 0
 label_settings = SubResource("LabelSettings_5sdux")
 horizontal_alignment = 1
 vertical_alignment = 1
-script = SubResource("GDScript_hfx3m")
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1979053537]
 layout_mode = 2

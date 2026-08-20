@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://Assets/Icons/Icon.png" id="2_0bmm3"]
 [ext_resource type="Script" uid="uid://bcg7bobsukrd6" path="res://Src/ui/views/main_window/menu.gd" id="3_l7de7"]
 [ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://Src/ui/components/menu_button/menu_button.tscn" id="4_wkrya"]
-[ext_resource type="PackedScene" uid="uid://cv1tktdl81w1v" path="res://Src/ui/components/menu_button/menu_button_Extend.tscn" id="5_0bmm3"]
+[ext_resource type="PackedScene" uid="uid://dcv5n12k0d276" path="res://Src/ui/components/menu_button/menu_button_extend.tscn" id="5_0bmm3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h308"]
 bg_color = Color(1, 1, 1, 0)
@@ -98,7 +98,7 @@ icon_hex = "E364"
 [node name="Books" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=867328694 instance=ExtResource("4_wkrya")]
 layout_mode = 2
 text = "图书管理"
-icon_hex = "0xE177"
+icon_hex = "E177"
 
 [node name="Users" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=1039463172 instance=ExtResource("4_wkrya")]
 layout_mode = 2

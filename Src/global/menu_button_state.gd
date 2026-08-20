@@ -20,7 +20,7 @@ func _ready() -> void:
 	hover_flat = _create_style(Color("#F8FBFF"))
 	# 新增：按住时的背景色，这里选了一个比 Hover 更明显的浅蓝色
 	pressed_flat = _create_style(Color("#E1EFFF")) 
-	selected_flat = _create_style(Color("48bfff3b"))
+	selected_flat = _create_style(Color("#48bfff3b"))
 	Disabled_flat = _create_style(Color.TRANSPARENT)
 
 func _create_style(bg: Color) -> StyleBoxFlat:

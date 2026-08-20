@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cg7uetwl8x2d0"]
 
-[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_xl2re"]
-[ext_resource type="Script" uid="uid://dg3kipsk3d7wp" path="res://Src/ui/views/main_window/MainWindow.cs" id="2_p5kqv"]
-[ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://Src/ui/views/main_window/internal/side_bar.tscn" id="3_fxu6i"]
-[ext_resource type="PackedScene" uid="uid://bdgoqc2x50aju" path="res://Src/ui/views/main_window/internal/top_bar.tscn" id="4_7pwth"]
-[ext_resource type="PackedScene" uid="uid://cyp40fsqv6o1u" path="res://Src/ui/views/main_window/internal/popup_personal_info.tscn" id="5_a4sk4"]
+[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://Assets/Themes/MainWindow.tres" id="1_ompdd"]
+[ext_resource type="Script" uid="uid://dg3kipsk3d7wp" path="res://Src/ui/views/main_window/MainWindow.cs" id="2_awo48"]
+[ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://Src/ui/views/main_window/internal/side_bar.tscn" id="3_5anip"]
+[ext_resource type="PackedScene" uid="uid://bdgoqc2x50aju" path="res://Src/ui/views/main_window/internal/top_bar.tscn" id="4_wrheh"]
+[ext_resource type="PackedScene" uid="uid://cyp40fsqv6o1u" path="res://Src/ui/views/main_window/internal/popup_personal_info.tscn" id="5_u6yt3"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5sdux"]
 color = Color(0, 0, 0, 0)
@@ -16,8 +16,8 @@ offset_right = 1322.0
 offset_bottom = 79.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_xl2re")
-script = ExtResource("2_p5kqv")
+theme = ExtResource("1_ompdd")
+script = ExtResource("2_awo48")
 
 [node name="MainMargin" type="MarginContainer" parent="." unique_id=1203706815]
 layout_mode = 0
@@ -30,14 +30,14 @@ theme_override_constants/margin_bottom = 18
 
 [node name="ShadowPanel" type="Panel" parent="MainMargin" unique_id=706875]
 layout_mode = 2
-theme = ExtResource("1_xl2re")
+theme = ExtResource("1_ompdd")
 theme_type_variation = &"ShadowPanel"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMargin" unique_id=1636535764]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="Sidebar" parent="MainMargin/HBoxContainer" unique_id=24056476 instance=ExtResource("3_fxu6i")]
+[node name="Sidebar" parent="MainMargin/HBoxContainer" unique_id=24056476 instance=ExtResource("3_5anip")]
 layout_mode = 2
 
 [node name="VSeparator" type="VSeparator" parent="MainMargin/HBoxContainer" unique_id=1595656575]
@@ -49,23 +49,23 @@ theme_override_styles/separator = SubResource("StyleBoxLine_5sdux")
 [node name="RightPanel" type="PanelContainer" parent="MainMargin/HBoxContainer" unique_id=1967428610]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_xl2re")
+theme = ExtResource("1_ompdd")
 theme_type_variation = &"RightPanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/HBoxContainer/RightPanel" unique_id=1629807748]
 layout_mode = 2
 
-[node name="Topbar" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=475468016 node_paths=PackedStringArray("menu") instance=ExtResource("4_7pwth")]
+[node name="Topbar" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=475468016 node_paths=PackedStringArray("menu") instance=ExtResource("4_wrheh")]
 layout_mode = 2
 menu = NodePath("../PopupPersonalInfo")
 
-[node name="PopupPersonalInfo" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=226862388 instance=ExtResource("5_a4sk4")]
+[node name="PopupPersonalInfo" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=226862388 instance=ExtResource("5_u6yt3")]
 visible = false
 
 [node name="Dashboard" type="PanelContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer" unique_id=744875133]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("1_xl2re")
+theme = ExtResource("1_ompdd")
 theme_type_variation = &"DashboardPanel"
 
 [node name="MarginContainer" type="MarginContainer" parent="MainMargin/HBoxContainer/RightPanel/VBoxContainer/Dashboard" unique_id=1682342741]
