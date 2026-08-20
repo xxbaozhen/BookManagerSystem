@@ -1,12 +1,12 @@
 @tool
 extends Node
 
-enum state {
-	Normal,
-	Hover,
-	Pressed, # 新增：按住状态
-	Selected,
-	Disabled
+enum State {
+	NORMAL,
+	HOVER,
+	PRESSED, # 新增：按住状态
+	SELECTED,
+	DISABLED
 }
 
 static var normal_flat: StyleBoxFlat

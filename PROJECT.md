@@ -84,7 +84,7 @@ MainWindow
 │   └── 退出登录
 │
 └── RightPanel
-    ├── Topbar
+    ├── TopBar
     │   ├── 搜索
     │   ├── 用户信息
     │   ├── 最小化
@@ -99,12 +99,12 @@ MainWindow
 - 无边框圆角窗口
 - Sidebar
 - Sidebar 菜单状态切换
-- Topbar
+- TopBar
 - 搜索框
 - 用户信息 Popup
 - Windows 窗口控制
 - FluentSystemIcons 图标组件
-- 可复用 MenuButton 组件
+- 可复用 SidebarMenuButton 组件
 
 ---
 
@@ -295,7 +295,7 @@ SQLite
 目标结构大致：
 
 ```text
-Src/
+src/
 ├── core/
 │   ├── models/
 │   ├── services/
@@ -327,9 +327,9 @@ Src/
 
 - [x] MainWindow
 - [x] Sidebar
-- [x] Topbar
+- [x] TopBar
 - [x] PopupMenu
-- [x] MenuButton
+- [x] SidebarMenuButton
 - [x] FontIcon
 - [x] Windows 窗口控制
 - [ ] UI 代码整理
@@ -454,7 +454,7 @@ UI 不应该直接承担复杂业务逻辑。
 
 - 基础窗口
 - Sidebar
-- Topbar
+- TopBar
 - PopupMenu
 - UI 组件基础设施
 - 窗口控制
