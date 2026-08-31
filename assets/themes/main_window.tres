@@ -2,22 +2,6 @@
 
 [ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://assets/fonts/微软雅黑.ttf" id="1_a1dqw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl2re"]
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjlbq"]
-bg_color = Color(0.8901961, 0.92156863, 0.9490196, 1)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-corner_detail = 15
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r38mi"]
 bg_color = Color(0.8560673, 0.8560673, 0.856067, 1)
 shadow_color = Color(0.6872149, 0.68721503, 0.6872149, 0.6)
@@ -96,10 +80,6 @@ shadow_size = 5
 shadow_offset = Vector2(3.33, 0)
 
 [resource]
-AvatarPanel/base_type = &"PanelContainer"
-AvatarPanel/styles/panel = SubResource("StyleBoxFlat_xl2re")
-Background/base_type = &"Panel"
-Background/styles/panel = SubResource("StyleBoxFlat_wjlbq")
 ContentBoardPanel/base_type = &"PanelContainer"
 ContentBoardPanel/styles/panel = SubResource("StyleBoxFlat_r38mi")
 ContentPanel/base_type = &"PanelContainer"
@@ -110,13 +90,6 @@ H1/font_sizes/font_size = 18
 H1/fonts/font = ExtResource("1_a1dqw")
 H1_Rich/base_type = &"RichTextLabel"
 H1_Rich/colors/default_color = Color(0, 0, 0, 1)
-H1_Rich/constants/shadow_outline_size = 0
-H1_Rich/constants/strikethrough_alpha = 0
-H1_Rich/constants/table_h_separation = 0
-H1_Rich/constants/table_v_separation = 0
-H1_Rich/constants/text_highlight_h_padding = 0
-H1_Rich/constants/text_highlight_v_padding = 0
-H1_Rich/constants/underline_alpha = 0
 H1_Rich/font_sizes/bold_font_size = 16
 H1_Rich/font_sizes/bold_italics_font_size = 16
 H1_Rich/font_sizes/font_size = 16
@@ -138,8 +111,8 @@ LineEdit/font_sizes/font_size = 20
 LineEdit/fonts/font = ExtResource("1_a1dqw")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_m3f5l")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_nsudi")
-PopupPerInfo/base_type = &"PopupPanel"
-PopupPerInfo/styles/panel = SubResource("StyleBoxFlat_7pwth")
+PopupPersonalInfo/base_type = &"PopupPanel"
+PopupPersonalInfo/styles/panel = SubResource("StyleBoxFlat_7pwth")
 RightPanel/base_type = &"PanelContainer"
 RightPanel/styles/panel = SubResource("StyleBoxFlat_osxru")
 SearchPanel/base_type = &"PanelContainer"

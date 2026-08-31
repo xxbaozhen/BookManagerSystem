@@ -1,5 +1,4 @@
-extends Node
-
+extends MarginContainer
 
 func _on_minimize_button_pressed() -> void:
 	get_window().set_mode(Window.MODE_MINIMIZED)

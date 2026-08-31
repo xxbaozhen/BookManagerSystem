@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://assets/themes/main_window.tres" id="1_sriic"]
 [ext_resource type="Texture2D" uid="uid://0ls4hocgixma" path="res://assets/icons/Icon.png" id="2_0bmm3"]
-[ext_resource type="Script" uid="uid://bcg7bobsukrd6" path="res://src/ui/views/main_window/menu.gd" id="3_l7de7"]
+[ext_resource type="Script" uid="uid://bcg7bobsukrd6" path="res://src/ui/views/main_window/internal/menu.gd" id="3_l7de7"]
 [ext_resource type="PackedScene" uid="uid://fu3qi1low6uj" path="res://src/ui/components/menu_button/sidebar_menu_button.tscn" id="4_wkrya"]
 [ext_resource type="PackedScene" uid="uid://dcv5n12k0d276" path="res://src/ui/components/menu_button/default_button.tscn" id="5_0bmm3"]
 
@@ -105,12 +105,12 @@ layout_mode = 2
 text = "用户管理"
 icon_hex = "F4C6"
 
-[node name="Categorys" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=565353102 instance=ExtResource("4_wkrya")]
+[node name="Categories" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=565353102 instance=ExtResource("4_wkrya")]
 layout_mode = 2
 text = "分类管理"
 icon_hex = "F5A7"
 
-[node name="Data" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=1964395497 instance=ExtResource("4_wkrya")]
+[node name="Statistics" parent="MarginContainer/VBoxContainer/Menu/VBoxContainer" unique_id=1964395497 instance=ExtResource("4_wkrya")]
 layout_mode = 2
 text = "数据统计"
 icon_hex = "F0174"

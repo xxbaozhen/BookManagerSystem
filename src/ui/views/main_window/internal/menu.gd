@@ -5,12 +5,13 @@ var selected_item = null
 
 func _ready():
 	for child in content.get_children():
-		child.gui_input.connect(_on_item_clicked.bind(child))
-		if child.state == MenuButtonState.State.SELECTED:
-			if selected_item == null:
-				selected_item = child
-			else:
-				child.state = MenuButtonState.State.NORMAL
+		if child is SidebarMenuButton:
+			child.gui_input.connect(_on_item_clicked.bind(child))
+			if child.state == MenuButtonState.State.SELECTED:
+				if selected_item == null:
+					selected_item = child
+				else:
+					child.state = MenuButtonState.State.NORMAL
 	
 	if selected_item == null and content.get_child_count() > 0:
 		var first_item = content.get_child(0)

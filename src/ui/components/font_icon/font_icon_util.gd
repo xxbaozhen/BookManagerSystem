@@ -1,4 +1,4 @@
-class_name FontIconUtil extends Node
+class_name FontIconUtil extends RefCounted
 
 static func code_point_to_text(input: String) -> String:
 	var text := ""

@@ -7,7 +7,7 @@ class_name SidebarMenuButton extends Control
 
 var _icon_hex: String = ""
 
-var is_disable: bool:
+var is_disabled: bool:
 	get:
 		return state == MenuButtonState.State.DISABLED
 
@@ -42,19 +42,20 @@ func _update_icon_display(hex_val: String) -> void:
 	icon.text = FontIconUtil.code_point_to_text(hex_val)
 
 func _on_mouse_entered() -> void:
-	if is_disable: 
+	if is_disabled: 
 		return
 	if state != MenuButtonState.State.SELECTED and state != MenuButtonState.State.PRESSED:
 		state = MenuButtonState.State.HOVER
 
 func _on_mouse_exited() -> void:
-	if is_disable: 
+	if is_disabled: 
 		return
 	# 增加判定：如果处于 Hover 或者 Pressed 时移出了鼠标，都退回 Normal
 	if state == MenuButtonState.State.HOVER or state == MenuButtonState.State.PRESSED:
 		state = MenuButtonState.State.NORMAL
 
 func update_style() -> void:
+	MenuButtonState.ensure_styles()
 	var color := Color("#000000")
 	# 状态判定
 	match state:

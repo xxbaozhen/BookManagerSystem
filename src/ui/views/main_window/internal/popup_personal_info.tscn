@@ -8,7 +8,7 @@ oversampling_override = 1.0
 size = Vector2i(193, 250)
 visible = true
 theme = ExtResource("1_k0fm6")
-theme_type_variation = &"PopupPerInfo"
+theme_type_variation = &"PopupPersonalInfo"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1400589481]
 anchors_preset = 15
