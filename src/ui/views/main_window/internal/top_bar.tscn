@@ -13,16 +13,6 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xl2re"]
 shader = ExtResource("5_ii5dt")
 
-[sub_resource type="GDScript" id="GDScript_045th"]
-script/source = "@tool
-extends Button
-
-@export var icon_name: String
-
-func _ready() -> void:
-	text = FontIconUtil.code_point_to_text(icon_name)
-"
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwtdw"]
 bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
 
@@ -164,7 +154,7 @@ layout_mode = 2
 theme = ExtResource("3_r36q3")
 theme_type_variation = &"DefaultButton"
 text = ""
-script = SubResource("GDScript_045th")
+script = ExtResource("4_ii5dt")
 icon_name = "EBCE"
 
 [node name="CloseButton" type="Button" parent="HBoxContainer/WindowsButtons/HBoxContainer" unique_id=1566250074]
@@ -179,7 +169,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kwtdw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m3f5l")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kwtdw")
 text = ""
-script = SubResource("GDScript_045th")
+script = ExtResource("4_ii5dt")
 icon_name = "F367"
 
 [connection signal="pressed" from="HBoxContainer/WindowsButtons/HBoxContainer/MinimizeButton" to="HBoxContainer/WindowsButtons" method="_on_minimize_button_pressed"]

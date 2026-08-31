@@ -36,7 +36,6 @@ project/assembly_name="BookManagerSystem"
 
 [editor]
 
-version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
 [physics]

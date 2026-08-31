@@ -1,9 +1,16 @@
 {
     "files.exclude": {
         "**/*.uid": true,
+        // "**/*.tscn": true,
+        // "**/*.tres": true,
         "**/*.import": true,
+        "**/*.tmp": true,
+
+
         "**/.godot": true,
         "**/.release": true,
+
+        
         "**/export_presets.cfg": true,
     }
 }

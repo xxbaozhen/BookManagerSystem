@@ -20,6 +20,15 @@ corner_detail = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r38mi"]
 bg_color = Color(0.8560673, 0.8560673, 0.856067, 1)
+shadow_color = Color(0.6872149, 0.68721503, 0.6872149, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(-1, -1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a48pw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.41598043, 0.41598046, 0.41598022, 1)
 
 [sub_resource type="DPITexture" id="DPITexture_p3ivk"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
@@ -44,9 +53,8 @@ shadow_size = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osxru"]
 bg_color = Color(1, 1, 1, 0)
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_detail = 15
+border_width_right = 1
+border_width_bottom = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1dqw"]
 bg_color = Color(1, 1, 1, 1)
@@ -92,8 +100,10 @@ AvatarPanel/base_type = &"PanelContainer"
 AvatarPanel/styles/panel = SubResource("StyleBoxFlat_xl2re")
 Background/base_type = &"Panel"
 Background/styles/panel = SubResource("StyleBoxFlat_wjlbq")
-DashboardPanel/base_type = &"PanelContainer"
-DashboardPanel/styles/panel = SubResource("StyleBoxFlat_r38mi")
+ContentBoardPanel/base_type = &"PanelContainer"
+ContentBoardPanel/styles/panel = SubResource("StyleBoxFlat_r38mi")
+ContentPanel/base_type = &"PanelContainer"
+ContentPanel/styles/panel = SubResource("StyleBoxFlat_a48pw")
 H1/base_type = &"Label"
 H1/colors/font_color = Color(0, 0, 0, 1)
 H1/font_sizes/font_size = 18
