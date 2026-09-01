@@ -5,8 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cmweo343mmrhb" path="res://src/ui/views/main_window/internal/side_bar.tscn" id="3_5anip"]
 [ext_resource type="PackedScene" uid="uid://bdgoqc2x50aju" path="res://src/ui/views/main_window/internal/top_bar.tscn" id="4_wrheh"]
 [ext_resource type="PackedScene" uid="uid://cyp40fsqv6o1u" path="res://src/ui/views/main_window/internal/popup_personal_info.tscn" id="5_u6yt3"]
-[ext_resource type="PackedScene" uid="uid://cy4616w5oipc1" path="res://src/ui/views/main_window/internal/content_board_panel.tscn" id="6_o82bd"]
-[ext_resource type="Theme" uid="uid://cgmrgsm68vjea" path="res://assets/themes/pages.tres" id="7_nxkqr"]
+[ext_resource type="Script" uid="uid://dbytpdfxprxd6" path="res://src/ui/views/pages/page_container.gd" id="6_jhoqw"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_5sdux"]
 color = Color(0, 0, 0, 0)
@@ -73,14 +72,4 @@ visible = false
 [node name="PageContainer" type="Control" parent="MainMargin/ContentPanel/HBoxContainer/RightPanel/VBoxContainer" unique_id=1166110431]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="Dashboard" parent="MainMargin/ContentPanel/HBoxContainer/RightPanel/VBoxContainer/PageContainer" unique_id=262126991 instance=ExtResource("6_o82bd")]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("7_nxkqr")
-theme_type_variation = &"Dashboard"
+script = ExtResource("6_jhoqw")

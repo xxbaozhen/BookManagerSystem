@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://cy4616w5oipc1"]
 
-[ext_resource type="Theme" uid="uid://xnpbfckksybo" path="res://assets/themes/main_window.tres" id="1_r6pc3"]
+[ext_resource type="Theme" uid="uid://cgmrgsm68vjea" path="res://assets/themes/pages.tres" id="1_njaws"]
 
-[node name="ContentBoardPanel" type="PanelContainer" unique_id=262126991]
+[node name="Dashboard" type="PanelContainer" unique_id=262126991]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("1_r6pc3")
-theme_type_variation = &"ContentBoardPanel"
+theme = ExtResource("1_njaws")
+theme_type_variation = &"Dashboard"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=41726173]
 layout_mode = 2
