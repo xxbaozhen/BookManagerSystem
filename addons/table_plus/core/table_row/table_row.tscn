@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c1x2b8pmjaeep"]
+
+[ext_resource type="Script" uid="uid://5peqooxuo5ux" path="res://addons/table_plus/core/table_row/table_row.gd" id="1_72h4v"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_72h4v"]
+color = Color(0.85267854, 0.36353034, 0.36353034, 1)
+grow_begin = 0.0
+
+[node name="TableRow" type="PanelContainer" unique_id=1302472936]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_72h4v")
+
+[node name="CellsHBoxContainer" type="HBoxContainer" parent="." unique_id=1267714092]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SeparatorContainer" type="Control" parent="." unique_id=143112714]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HSeparatorContainer" type="Control" parent="." unique_id=2083617392]
+z_index = 1
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HorizontalSeparator" type="Panel" parent="HSeparatorContainer" unique_id=494280586]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_72h4v")

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dnhalt8e54to5"]
+
+[ext_resource type="Script" uid="uid://bk5xharox6t6g" path="res://addons/table_plus/core/table_root/table_root.gd" id="1_y70mj"]
+[ext_resource type="PackedScene" uid="uid://dywx8i4g4nsyp" path="res://addons/table_plus/core/table_header/table_header.tscn" id="2_y70mj"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_y70mj"]
+grow_begin = 0.0
+
+[node name="TableRoot" type="Control" unique_id=251403737]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y70mj")
+
+[node name="RootVBoxContainer" type="VBoxContainer" parent="." unique_id=253186423]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TitleLabel" type="RichTextLabel" parent="RootVBoxContainer" unique_id=1070127581]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Title"
+fit_content = true
+
+[node name="BodyHBoxContainer" type="HBoxContainer" parent="RootVBoxContainer" unique_id=635991949]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="ContentVBoxContainer" type="VBoxContainer" parent="RootVBoxContainer/BodyHBoxContainer" unique_id=522955967]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="TableHeader" parent="RootVBoxContainer/BodyHBoxContainer/ContentVBoxContainer" unique_id=1630566055 instance=ExtResource("2_y70mj")]
+unique_name_in_owner = true
+clip_contents = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="HeaderRowsSeparatorContainer" type="Control" parent="RootVBoxContainer/BodyHBoxContainer/ContentVBoxContainer/TableHeader" unique_id=1080871394]
+z_index = 1
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HeaderRowsSeparator" type="Panel" parent="RootVBoxContainer/BodyHBoxContainer/ContentVBoxContainer/TableHeader/HeaderRowsSeparatorContainer" unique_id=935683340]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_y70mj")
+
+[node name="RowsScrollContainer" type="ScrollContainer" parent="RootVBoxContainer/BodyHBoxContainer/ContentVBoxContainer" unique_id=954142668]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="RowsVBoxContainer" type="VBoxContainer" parent="RootVBoxContainer/BodyHBoxContainer/ContentVBoxContainer/RowsScrollContainer" unique_id=2097178002]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="OuterVScrollBar" type="VScrollBar" parent="RootVBoxContainer/BodyHBoxContainer" unique_id=179274224]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+max_value = 1027.0
+page = 1027.0

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b7pa4pgpvifai"]
+
+[ext_resource type="Script" uid="uid://dwie3p5q1pnx" path="res://addons/table_plus/core/table_cell/number_table_cell/number_table_cell.gd" id="1_w3h2w"]
+
+[node name="NumberTableCell" type="PanelContainer" unique_id=1410645425]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_w3h2w")
+
+[node name="ContentRichTextLabel" type="RichTextLabel" parent="." unique_id=99119861]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "Text"

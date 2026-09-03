@@ -3,6 +3,6 @@
 /android/
 .release/
 .vscode/
-.addons/
+# .addons/
 
 export_presets.cfg

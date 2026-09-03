@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://stchjotskrjc"]
+
+[ext_resource type="Script" uid="uid://clmrnqv7pa6yj" path="res://addons/table_plus/core/table_header/table_header_cell.gd" id="1_rkh1g"]
+[ext_resource type="Texture2D" uid="uid://6oamrksw08d" path="res://addons/table_plus/icons/sort.svg" id="2_yl1e7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl1e7"]
+bg_color = Color(0.1395089, 0.1395089, 0.1395089, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_yl1e7"]
+grow_begin = 0.0
+grow_end = 0.0
+vertical = true
+
+[node name="TableHeaderCell" type="PanelContainer" unique_id=1320033312]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_yl1e7")
+script = ExtResource("1_rkh1g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=640447790]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TitleRichTextLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=435927759]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+bbcode_enabled = true
+text = "TITLE"
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="SortIconsVBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=247464477]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="AscIconTextureRect" type="TextureRect" parent="HBoxContainer/SortIconsVBoxContainer" unique_id=102443581]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("2_yl1e7")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="DescIconTextureRect" type="TextureRect" parent="HBoxContainer/SortIconsVBoxContainer" unique_id=824509904]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("2_yl1e7")
+expand_mode = 3
+stretch_mode = 4
+flip_v = true
+
+[node name="SeparatorContainer" type="Control" parent="." unique_id=544013974]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Separator" type="Panel" parent="SeparatorContainer" unique_id=1977497817]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_yl1e7")

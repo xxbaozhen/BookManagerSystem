@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://c0raft8nbhnrw"]
+
+[ext_resource type="Script" uid="uid://bwolqxek8nbjy" path="res://addons/table_plus/table_plus.gd" id="1_8n7ha"]
+[ext_resource type="Script" uid="uid://dwoeqnfec5phl" path="res://addons/table_plus/examples/table_plus_example.gd" id="1_iu0br"]
+[ext_resource type="Script" uid="uid://kumc30vi2trq" path="res://addons/table_plus/core/table_header/table_header_cell_resource.gd" id="2_injbv"]
+[ext_resource type="Script" uid="uid://df63x5gx732hm" path="res://addons/table_plus/core/table_plus_theme.gd" id="3_5ir3d"]
+[ext_resource type="Texture2D" uid="uid://cc7arblssgp7n" path="res://addons/table_plus/icons/false.svg" id="3_lj6lm"]
+[ext_resource type="Texture2D" uid="uid://baik3del4jgmt" path="res://addons/table_plus/icons/true.svg" id="4_iu0br"]
+
+[sub_resource type="Resource" id="Resource_injbv"]
+script = ExtResource("2_injbv")
+id = "1"
+title = "ID"
+overflow_mode = 1
+title_alignment = 1
+content_horizontal_alignment = 1
+metadata/_custom_type_script = "uid://kumc30vi2trq"
+
+[sub_resource type="Resource" id="Resource_5ir3d"]
+script = ExtResource("2_injbv")
+id = "2"
+title = "NAME"
+width_ratio = 2.0
+title_alignment = 1
+content_horizontal_alignment = 1
+metadata/_custom_type_script = "uid://kumc30vi2trq"
+
+[sub_resource type="Resource" id="Resource_jo8nk"]
+script = ExtResource("2_injbv")
+id = "3"
+title = "Introduction"
+width_ratio = 3.0
+sortable = false
+overflow_mode = 1
+title_alignment = 1
+metadata/_custom_type_script = "uid://kumc30vi2trq"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iu0br"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5jsi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhw45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ymby"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3j5t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4w05q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6egjy"]
+bg_color = Color(0.14117648, 0.14117648, 0.14117648, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv01j"]
+bg_color = Color(0.14117648, 0.14117648, 0.14117648, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2583m"]
+color = Color(0.4, 0.4, 0.4, 1)
+grow_begin = 0.0
+grow_end = 0.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_e5pih"]
+color = Color(0.4, 0.4, 0.4, 1)
+grow_begin = 0.0
+grow_end = 0.0
+vertical = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3i1yd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vqg62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2rp5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8n8t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tm6lc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xuefx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3d6lx"]
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0hlh"]
+bg_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_codk1"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ti6e5"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8ei8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb3ox"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vxuic"]
+color = Color(0.4, 0.4, 0.4, 1)
+grow_begin = 0.0
+grow_end = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tn7w0"]
+bg_color = Color(0.3, 0.3, 0.3, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ujmc"]
+bg_color = Color(0.35, 0.35, 0.35, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_dbp8h"]
+color = Color(0.4, 0.4, 0.4, 1)
+grow_begin = 0.0
+grow_end = 0.0
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_derko"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ral2e"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hl0kw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.75, 0.75, 0.75, 0.75)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drfup"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q00gi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2xm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjgua"]
+
+[sub_resource type="Resource" id="Resource_6x1gs"]
+script = ExtResource("3_5ir3d")
+header_background_stylebox = SubResource("StyleBoxFlat_6egjy")
+header_vertical_separator_stylebox = SubResource("StyleBoxLine_e5pih")
+header_horizontal_separator_stylebox = SubResource("StyleBoxLine_2583m")
+header_cell_background_stylebox = SubResource("StyleBoxFlat_cv01j")
+row_background_styleboxs = Array[StyleBox]([SubResource("StyleBoxFlat_codk1"), SubResource("StyleBoxFlat_ti6e5")])
+row_hover_background_stylebox = Array[StyleBox]([SubResource("StyleBoxFlat_tn7w0"), SubResource("StyleBoxFlat_4ujmc")])
+row_vertical_separator_stylebox = SubResource("StyleBoxLine_dbp8h")
+row_horizontal_separator_stylebox = SubResource("StyleBoxLine_vxuic")
+row_cell_background_stylebox = SubResource("StyleBoxEmpty_g8ei8")
+row_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_yb3ox")
+text_cell_background_stylebox = SubResource("StyleBoxEmpty_r2xm2")
+text_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_gjgua")
+number_cell_background_stylebox = SubResource("StyleBoxEmpty_3i1yd")
+number_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_vqg62")
+currency_cell_background_stylebox = SubResource("StyleBoxEmpty_yhw45")
+currency_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_5ymby")
+percentage_cell_background_stylebox = SubResource("StyleBoxEmpty_f2rp5")
+percentage_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_a8n8t")
+date_cell_background_stylebox = SubResource("StyleBoxEmpty_s3j5t")
+date_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_4w05q")
+boolean_cell_background_stylebox = SubResource("StyleBoxEmpty_iu0br")
+boolean_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_i5jsi")
+boolean_cell_true_icon = ExtResource("4_iu0br")
+boolean_cell_false_icon = ExtResource("3_lj6lm")
+progress_cell_background_stylebox = SubResource("StyleBoxEmpty_tm6lc")
+progress_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_xuefx")
+progress_cell_progress_bar_background = SubResource("StyleBoxFlat_3d6lx")
+progress_cell_progress_bar_fill = SubResource("StyleBoxFlat_m0hlh")
+scroll_bar_styles_scroll = SubResource("StyleBoxFlat_drfup")
+scroll_bar_styles_scroll_focus = SubResource("StyleBoxFlat_q00gi")
+scroll_bar_styles_grabber = SubResource("StyleBoxFlat_derko")
+scroll_bar_styles_grabber_highlight = SubResource("StyleBoxFlat_ral2e")
+scroll_bar_styles_grabber_pressed = SubResource("StyleBoxFlat_hl0kw")
+
+[node name="TablePlusExample" type="Control" unique_id=245394638]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iu0br")
+
+[node name="TablePlus" type="Control" parent="." unique_id=517538277]
+anchors_preset = 0
+offset_left = 520.0
+offset_top = 270.0
+offset_right = 1450.0
+offset_bottom = 721.0
+script = ExtResource("1_8n7ha")
+title_text = "TEST TABLE"
+title_alignment = 1
+headers = Array[ExtResource("2_injbv")]([SubResource("Resource_injbv"), SubResource("Resource_5ir3d"), SubResource("Resource_jo8nk")])
+headers_height = 60.0
+row_height = 60.0
+preview_data = Array[Array]([["0", "Alex", "The default female character in the game."], ["1", "Steve", "The default male character in the game."], [], [], [], [], []])
+content_scroll_bar_separation = 2.0
+custom_theme = SubResource("Resource_6x1gs")
+metadata/_custom_type_script = "uid://bwolqxek8nbjy"

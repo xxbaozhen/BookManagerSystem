@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dywx8i4g4nsyp"]
+
+[ext_resource type="Script" uid="uid://2n5lvc5y32lo" path="res://addons/table_plus/core/table_header/table_header.gd" id="1_qyvxs"]
+
+[node name="TableHeader" type="PanelContainer" unique_id=1518220268]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qyvxs")
+
+[node name="CellsHBoxContainer" type="HBoxContainer" parent="." unique_id=696646614]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SeparatorContainer" type="Control" parent="." unique_id=931570395]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2

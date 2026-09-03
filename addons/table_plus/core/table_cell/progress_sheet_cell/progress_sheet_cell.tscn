@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bx557lgmt1erx"]
+
+[ext_resource type="Script" uid="uid://dr382f6j7ss8" path="res://addons/table_plus/core/table_cell/progress_table_cell/progress_table_cell.gd" id="1_k671s"]
+
+[node name="ProgressTableCell" type="PanelContainer" unique_id=1215231494]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_k671s")
+
+[node name="ContentProgressBar" type="ProgressBar" parent="." unique_id=163510405]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+value = 50.0

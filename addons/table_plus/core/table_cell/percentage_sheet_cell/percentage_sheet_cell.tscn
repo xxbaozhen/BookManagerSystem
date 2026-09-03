@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bb65q572lly2t"]
+
+[ext_resource type="Script" uid="uid://c0miy8vknolfv" path="res://addons/table_plus/core/table_cell/percentage_table_cell/percentage_table_cell.gd" id="1_3f0kw"]
+
+[node name="PercentageTableCell" type="PanelContainer" unique_id=552335635]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_3f0kw")
+
+[node name="ContentRichTextLabel" type="RichTextLabel" parent="." unique_id=789292961]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "Text"

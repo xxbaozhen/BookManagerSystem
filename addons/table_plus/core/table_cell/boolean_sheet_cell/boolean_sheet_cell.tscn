@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://mc55jjsc2egq"]
+
+[ext_resource type="Script" uid="uid://hkbn17o4c0uj" path="res://addons/table_plus/core/table_cell/boolean_table_cell/boolean_table_cell.gd" id="1_q7x0n"]
+[ext_resource type="Texture2D" uid="uid://baik3del4jgmt" path="res://addons/table_plus/icons/true.svg" id="1_w3jkn"]
+
+[node name="BooleanTableCell" type="PanelContainer" unique_id=2141660487]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_q7x0n")
+
+[node name="ContentTextureRect" type="TextureRect" parent="." unique_id=1554934507]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+texture = ExtResource("1_w3jkn")
+expand_mode = 2
+stretch_mode = 5
