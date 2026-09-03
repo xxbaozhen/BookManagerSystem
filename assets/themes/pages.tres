@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://cgmrgsm68vjea"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rsfl"]
-bg_color = Color(0.8560673, 0.8560673, 0.856067, 1)
+bg_color = Color(0.94414306, 0.9742022, 0.9999998, 1)
 shadow_color = Color(0.6872149, 0.68721503, 0.6872149, 0.6)
 shadow_size = 1
 shadow_offset = Vector2(-1, -1)

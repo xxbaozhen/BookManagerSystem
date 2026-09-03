@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dfw7ftw0qypjg"]
+
+[ext_resource type="Theme" uid="uid://c5wtjmfbfp3gm" path="res://assets/themes/dashboard.tres" id="1_theme"]
+[ext_resource type="Script" uid="uid://c4pffdgkl8y46" path="res://src/ui/components/panel_header/panel_header.gd" id="2_script"]
+
+[node name="PanelHeader" type="HBoxContainer"]
+layout_mode = 3
+anchors_preset = 0
+theme_override_constants/separation = 10
+script = ExtResource("2_script")
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_theme")
+theme_type_variation = &"PanelSectionTitle"
+text = "标题"
+
+[node name="Spacer" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3

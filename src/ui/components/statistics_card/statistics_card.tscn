@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dmufue23yyqyc"]
+
+[ext_resource type="Theme" uid="uid://c5wtjmfbfp3gm" path="res://assets/themes/dashboard.tres" id="1_theme"]
+[ext_resource type="Script" uid="uid://drhji8xgnestq" path="res://src/ui/components/font_icon/font_icon_component.gd" id="2_icon"]
+[ext_resource type="Script" uid="uid://ovobg3mdkm02" path="res://src/ui/components/statistics_card/statistics_card.gd" id="3_script"]
+
+[node name="StatisticsCard" type="PanelContainer" unique_id=658713079]
+custom_minimum_size = Vector2(0, 96)
+size_flags_horizontal = 3
+theme = ExtResource("1_theme")
+theme_type_variation = &"StatisticsCard"
+script = ExtResource("3_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1199563485]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=69187350]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Icon" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1483516727]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+custom_maximum_size = Vector2(44, 44)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"StatsCardIconBgBlue"
+
+[node name="IconLabel" type="Label" parent="MarginContainer/HBoxContainer/Icon" unique_id=1844147159]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"StatsCardIcon"
+text = ""
+horizontal_alignment = 1
+script = ExtResource("2_icon")
+icon_name = "F8FE"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1249640393]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=348891436]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"StatsCardTitle"
+text = "标题"
+
+[node name="ValueBox" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1517009408]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Value" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/ValueBox" unique_id=906380314]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_theme")
+theme_type_variation = &"StatsCardValue"
+text = "0"
+
+[node name="Unit" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/ValueBox" unique_id=906007850]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"StatsCardUnit"

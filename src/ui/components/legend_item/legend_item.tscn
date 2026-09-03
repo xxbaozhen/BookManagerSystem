@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c6td6ilgwrpxq"]
+
+[ext_resource type="Theme" uid="uid://c5wtjmfbfp3gm" path="res://assets/themes/dashboard.tres" id="1_theme"]
+[ext_resource type="Script" uid="uid://7ge6w70o02qd" path="res://src/ui/components/legend_item/legend_item.gd" id="2_script"]
+
+[node name="LegendItem" type="HBoxContainer"]
+layout_mode = 3
+anchors_preset = 0
+theme_override_constants/separation = 8
+script = ExtResource("2_script")
+
+[node name="ColorDot" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(10, 10)
+custom_maximum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_theme")
+theme_type_variation = &"LegendDot"
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_theme")
+theme_type_variation = &"LegendLabel"
+text = "图例"

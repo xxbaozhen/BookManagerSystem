@@ -1,6 +1,14 @@
+@tool
 class_name PageManager extends Control
 
 var current_page: Control
+
+@export var load_page: String
+
+
+func _ready() -> void:
+    if load_page:
+        show_page(load_page)
 
 func show_page(page_name: String) -> void:
     var path := "res://src/ui/views/pages/%s/%s.tscn" % [page_name, page_name]

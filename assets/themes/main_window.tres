@@ -69,7 +69,7 @@ bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
 corner_radius_top_right = 8
 corner_detail = 15
 shadow_color = Color(0.20871013, 0.20871016, 0.20871013, 0.6)
-shadow_size = 5
+shadow_size = 3
 shadow_offset = Vector2(3.33, 0)
 
 [resource]

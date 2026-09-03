@@ -1,0 +1,162 @@
+[gd_resource type="Resource" script_class="TablePlusTheme" format=3 uid="uid://dclgr2jypms06"]
+
+[ext_resource type="Texture2D" uid="uid://cc7arblssgp7n" path="res://addons/table_plus/icons/false.svg" id="1_ec386"]
+[ext_resource type="FontFile" uid="uid://e2a4mbd3pix6" path="res://assets/fonts/微软雅黑.ttf" id="1_font"]
+[ext_resource type="Texture2D" uid="uid://baik3del4jgmt" path="res://addons/table_plus/icons/true.svg" id="2_dauvs"]
+[ext_resource type="Script" uid="uid://df63x5gx732hm" path="res://addons/table_plus/core/table_plus_theme.gd" id="2_theme"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf2ac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgbya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owsai"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_we5a8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2nuv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h0odd"]
+
+[sub_resource type="StyleBoxEmpty" id="HeaderBg"]
+
+[sub_resource type="StyleBoxFlat" id="HeaderCellBg"]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxLine" id="HeaderHSepp"]
+color = Color(0.8784, 0.902, 0.9412, 1)
+grow_begin = 0.0
+grow_end = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="HeaderVSepp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hp88w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1mkr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4c7u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fr5nv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpj0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_absqn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3so4"]
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qo4st"]
+bg_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="RowBgA"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="RowBgB"]
+bg_color = Color(0.9647, 0.9765, 0.9882, 1)
+
+[sub_resource type="StyleBoxFlat" id="CellBg"]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxLine" id="RowHSepp"]
+color = Color(0.9137, 0.9333, 0.9608, 1)
+grow_begin = 0.0
+grow_end = 0.0
+
+[sub_resource type="StyleBoxFlat" id="RowHoverBg"]
+bg_color = Color(0.9373, 0.9569, 0.9804, 1)
+
+[sub_resource type="StyleBoxEmpty" id="RowVSepp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_276tr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fmkp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81yx5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.75, 0.75, 0.75, 0.75)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i62u"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_offa7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d56i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ejk13"]
+
+[resource]
+script = ExtResource("2_theme")
+header_background_stylebox = SubResource("HeaderBg")
+header_vertical_separator_stylebox = SubResource("HeaderVSepp")
+header_horizontal_separator_stylebox = SubResource("HeaderHSepp")
+header_cell_font = ExtResource("1_font")
+header_cell_font_size = 12
+header_cell_font_color = Color(0.55, 0.58, 0.66, 1)
+header_cell_background_stylebox = SubResource("HeaderCellBg")
+row_background_styleboxs = Array[StyleBox]([SubResource("RowBgA"), SubResource("RowBgB")])
+row_hover_background_stylebox = Array[StyleBox]([SubResource("RowHoverBg"), SubResource("RowHoverBg")])
+row_vertical_separator_stylebox = SubResource("RowVSepp")
+row_horizontal_separator_stylebox = SubResource("RowHSepp")
+row_cell_font = ExtResource("1_font")
+row_cell_font_size = 13
+row_cell_font_color = Color(0.15, 0.16, 0.2, 1)
+row_cell_background_stylebox = SubResource("CellBg")
+row_cell_hover_background_stylebox = SubResource("CellBg")
+text_cell_background_stylebox = SubResource("StyleBoxEmpty_4d56i")
+text_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_ejk13")
+number_cell_background_stylebox = SubResource("StyleBoxEmpty_hp88w")
+number_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_1mkr3")
+currency_cell_background_stylebox = SubResource("StyleBoxEmpty_owsai")
+currency_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_we5a8")
+percentage_cell_background_stylebox = SubResource("StyleBoxEmpty_c4c7u")
+percentage_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_fr5nv")
+date_cell_background_stylebox = SubResource("StyleBoxEmpty_r2nuv")
+date_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_h0odd")
+boolean_cell_background_stylebox = SubResource("StyleBoxEmpty_hf2ac")
+boolean_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_mgbya")
+boolean_cell_true_icon = ExtResource("2_dauvs")
+boolean_cell_false_icon = ExtResource("1_ec386")
+progress_cell_background_stylebox = SubResource("StyleBoxEmpty_dpj0o")
+progress_cell_hover_background_stylebox = SubResource("StyleBoxEmpty_absqn")
+progress_cell_progress_bar_background = SubResource("StyleBoxFlat_a3so4")
+progress_cell_progress_bar_fill = SubResource("StyleBoxFlat_qo4st")
+scroll_bar_styles_scroll = SubResource("StyleBoxFlat_0i62u")
+scroll_bar_styles_scroll_focus = SubResource("StyleBoxFlat_offa7")
+scroll_bar_styles_grabber = SubResource("StyleBoxFlat_276tr")
+scroll_bar_styles_grabber_highlight = SubResource("StyleBoxFlat_4fmkp")
+scroll_bar_styles_grabber_pressed = SubResource("StyleBoxFlat_81yx5")
