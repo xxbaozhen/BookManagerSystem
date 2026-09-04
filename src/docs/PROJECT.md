@@ -6,7 +6,7 @@ BookManagerSystem 是一个基于 **Godot 4.7 .NET** 开发的 Windows 桌面端
 
 项目主要用于管理图书、用户以及图书借阅相关数据，并提供直观的桌面管理界面。  
 
-当前项目处于 **UI 框架搭建阶段**，核心业务逻辑和数据库功能尚未开始实现。
+当前项目处于 **UI 页面制作阶段**：主窗口框架（Sidebar / TopBar）与多页面动态切换机制已完成，Dashboard 首页已按设计稿绘制完毕。核心业务逻辑和数据库功能尚未开始实现，页面内数据目前为占位的模拟数据。
 
 ---
 
@@ -64,6 +64,7 @@ BookManagerSystem 是一个基于 **Godot 4.7 .NET** 开发的 Windows 桌面端
 - 微软雅黑
 - FluentSystemIcons
 - Unicode Code Point 图标
+- TablePlus 插件（`res://addons/table_plus/`）：用于表格 / 数据分析类组件，详见 [TABLEPLUS.md](./TABLEPLUS.md)
 
 ---
 
@@ -90,8 +91,20 @@ MainWindow
     │   ├── 最小化
     │   └── 关闭
     │
-    └── Dashboard
+    └── PageManager            # 多页面动态容器（@tool，按 load_page 动态实例化页面）
+        └── Dashboard          # 当前加载页：res://src/ui/views/pages/dashboard/dashboard.tscn
+            ├── Header                 # 标题 / 副标题
+            ├── StatisticsCards        # 4 张统计卡片
+            ├── StatisticsArea
+            │   ├── BorrowStatisticsPanel    # 借阅趋势（图表占位）
+            │   └── CategoryStatisticsPanel  # 分类占比（图表占位 + 图例）
+            └── RecentArea
+                ├── RecentBorrowPanel   # 最近借阅（TablePlus 表格）
+                └── RecentBooksPanel    # 最近上新（TablePlus 表格）
 ```
+
+页面通过 `PageManager`（`src/ui/views/pages/page_manager.gd`）动态加载：
+`load_page` 为页面名，运行时按 `res://src/ui/views/pages/<name>/<name>.tscn` 实例化并铺满容器，切换时释放旧页面。当前 `load_page = "dashboard"`。
 
 目前已经完成的主要 UI：
 
@@ -103,8 +116,16 @@ MainWindow
 - 搜索框
 - 用户信息 Popup
 - Windows 窗口控制
-- FluentSystemIcons 图标组件
+- FluentSystemIcons 图标组件（FontIcon）
 - 可复用 SidebarMenuButton 组件
+- PageManager 多页面动态切换
+- Dashboard 首页整页绘制
+  - 统计卡片 StatisticsCard（图标 + 标题 + 数值 + 单位，4 色图标底）
+  - 图表面板（借阅趋势 / 分类占比，当前为占位区 + 图例 LegendItem）
+  - 最近借阅 / 最近上新表格（基于 TablePlus，运行时由 `dashboard.gd` 注入模拟数据）
+- 可复用面板组件：PanelHeader、LegendItem
+
+> 说明：Dashboard 中表格数据、卡片数值、图表均为静态 / 模拟内容，尚未接入业务层；表格组件已从早期手写的「表头 HBox + 行实例」方案替换为 TablePlus 插件。
 
 ---
 
@@ -290,30 +311,45 @@ SQLite
 
 ## 7. 项目结构规划
 
-当前结构会随着项目开发逐步调整。
-
-目标结构大致：
+当前结构会随着项目开发逐步调整。`core / global / ui` 的分层目标不变，下面是**当前实际结构**（业务层 `core/` 尚未创建）：
 
 ```text
-src/
-├── core/
-│   ├── models/
-│   ├── services/
-│   └── repositories/
-│
-├── global/
-│
-└── ui/
-    ├── components/
-    └── views/
+res://
+├── addons/
+│   └── table_plus/                  # TablePlus 表格插件
+├── assets/
+│   ├── fonts/                       # 微软雅黑、FluentSystemIcons
+│   ├── icons/
+│   ├── shaders/
+│   └── themes/                      # *.tres 主题（main_window / pages / dashboard / buttons / table_plus_light）
+├── src/
+│   ├── docs/                        # 项目文档（本文件、TablePlus 使用说明）
+│   ├── global/                      # 全局状态（menu_button_state.gd）
+│   └── ui/
+│       ├── components/              # 可复用 UI 组件（场景 + 脚本）
+│       │   ├── font_icon/           #   FontIcon 字体图标
+│       │   ├── menu_button/         #   SidebarMenuButton / DefaultButton
+│       │   ├── panel_header/        #   面板标题栏
+│       │   ├── statistics_card/     #   统计卡片
+│       │   └── legend_item/         #   图例项
+│       └── views/
+│           ├── main_window/         # 主窗口（MainWindow.cs + 场景）
+│           │   └── internal/        #   side_bar / top_bar / popup / 窗口控制
+│           ├── pages/               # 由 PageManager 动态加载的页面
+│           │   ├── page_manager.gd
+│           │   └── dashboard/       #   首页（dashboard.tscn + dashboard.gd）
+│           └── debug_page_test/     # 调试用独立页面（截图 / 布局验证）
+└── project.godot
 ```
 
 其中：
 
-- `core/`：核心业务与数据相关代码
+- `core/`（待建）：核心业务与数据相关代码（models / services / repositories）
 - `global/`：全局状态和工具
-- `ui/components/`：可复用 UI 组件
-- `ui/views/`：具体页面
+- `ui/components/`：可复用 UI 组件，每个组件一个独立文件夹（`.tscn` + `.gd`）
+- `ui/views/main_window/`：应用主窗口框架
+- `ui/views/pages/`：业务页面，命名约定为 `<name>/<name>.tscn`，由 PageManager 按名加载
+- `addons/`：第三方插件
 
 实际结构以开发过程中验证后的方案为准，不强制一次性完成。
 
@@ -332,7 +368,21 @@ src/
 - [x] SidebarMenuButton
 - [x] FontIcon
 - [x] Windows 窗口控制
+- [x] PageManager 多页面动态切换
 - [ ] UI 代码整理
+
+---
+
+### Phase 1.5：UI 页面制作
+
+状态：**进行中**
+
+- [x] Dashboard 首页布局（统计卡片 / 图表面板 / 最近借阅 / 最近上新）
+- [x] 统计卡片、面板标题、图例等可复用组件
+- [x] 引入 TablePlus 插件并替换手写表格 / 列表
+- [ ] 真实图表（借阅趋势 / 分类占比，当前为占位）
+- [ ] 其余页面（借阅 / 图书 / 用户 / 分类 / 统计 / 设置）
+- [ ] 页面接入业务数据（当前为模拟数据）
 
 ---
 
@@ -402,12 +452,13 @@ src/
 
 ### Phase 7：Dashboard & Statistics
 
-状态：**未开始**
+状态：**UI 外壳已完成（见 Phase 1.5），数据与图表逻辑未开始**
 
-- [ ] Dashboard
+- [x] Dashboard 页面布局
 - [ ] 数据统计
-- [ ] 图表
+- [ ] 图表（接入真实图表组件）
 - [ ] 最近活动
+- [ ] 卡片 / 表格接入真实数据
 
 ---
 
@@ -452,25 +503,22 @@ UI 不应该直接承担复杂业务逻辑。
 
 当前项目已经完成：
 
-- 基础窗口
-- Sidebar
-- TopBar
-- PopupMenu
-- UI 组件基础设施
-- 窗口控制
+- 基础窗口、无边框圆角窗口与窗口控制
+- Sidebar、TopBar、PopupMenu
+- UI 组件基础设施（FontIcon、SidebarMenuButton 等）
+- PageManager 多页面动态切换
+- Dashboard 首页整页 UI（统计卡片、图表面板占位、TablePlus 最近借阅 / 最近上新表格）
+- TablePlus 插件集成与项目浅色主题 `table_plus_light.tres`
 
-当前最重要的下一阶段：
+当前页面内数据均为模拟数据，图表为占位区，尚未连接任何业务 / 数据层。
 
-> **从 UI 框架进入项目架构和业务设计阶段。**
+当前仍处于 **UI 页面制作阶段**，并行可选项：
 
-下一步优先确定：
+1. 继续制作其余页面（借阅 / 图书 / 用户 / 分类 / 统计 / 设置）
+2. 将 Dashboard 图表占位替换为真实图表
+3. 进入项目架构与业务设计（数据模型、SQLite、C# 业务层、UI 与业务层数据流）
 
-1. 数据模型
-2. SQLite 数据库结构
-3. C# 业务层结构
-4. UI 与业务层之间的数据流
-
-之后再开始实现具体业务功能。
+> UI 与业务层解耦是既定原则；页面可先用模拟数据完成视觉与交互，再统一接入业务层。
 
 ---
 
