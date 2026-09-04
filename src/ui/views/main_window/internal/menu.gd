@@ -1,5 +1,6 @@
 extends MarginContainer
 
+
 var selected_item = null
 @onready var content: VBoxContainer = $VBoxContainer
 
@@ -17,6 +18,7 @@ func _ready():
 		var first_item = content.get_child(0)
 		first_item.state = MenuButtonState.State.SELECTED
 		selected_item = first_item
+		MenuButtonState.page_selected.emit(first_item.name.to_lower())
 
 func _on_item_clicked(event: InputEvent, item: Control):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -38,4 +40,5 @@ func _on_item_clicked(event: InputEvent, item: Control):
 			selected_item = item
 			selected_item.state = MenuButtonState.State.SELECTED
 			
+			MenuButtonState.page_selected.emit(item.name.to_lower())
 			#print("当前选中: ", item.text)

@@ -9,6 +9,8 @@ enum State {
 	DISABLED
 }
 
+signal page_selected(page_name: String)
+
 static var normal_flat: StyleBoxFlat
 static var hover_flat: StyleBoxFlat
 static var pressed_flat: StyleBoxFlat # 新增
