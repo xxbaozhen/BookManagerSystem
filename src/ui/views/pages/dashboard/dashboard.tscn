@@ -257,9 +257,9 @@ theme = ExtResource("2_rogex")
 theme_type_variation = &"ChartPlaceholder"
 text = "分类占比图"
 
-[node name="Legend" type="VBoxContainer" parent="MarginContainer/VBoxContainer/StatisticsArea/CategoryStatisticsPanel/MarginContainer/VBoxContainer" unique_id=1736284019]
+[node name="Legend" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatisticsArea/CategoryStatisticsPanel/MarginContainer/VBoxContainer" unique_id=1844539357]
 layout_mode = 2
-theme_override_constants/separation = 6
+theme_override_constants/separation = 81
 
 [node name="LiteratureItem" parent="MarginContainer/VBoxContainer/StatisticsArea/CategoryStatisticsPanel/MarginContainer/VBoxContainer/Legend" unique_id=398863634 instance=ExtResource("5_lgnd")]
 layout_mode = 2
